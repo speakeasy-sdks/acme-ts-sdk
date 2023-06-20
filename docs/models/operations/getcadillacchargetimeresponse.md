@@ -1,0 +1,11 @@
+# GetCadillacChargeTimeResponse
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `chargeTime`                                                                       | [shared.ChargeTime](../../models/shared/chargetime.md)                             | :heavy_minus_sign:                                                                 | returns the date and time the vehicle expects to "complete" this charging session. |
+| `contentType`                                                                      | *string*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `statusCode`                                                                       | *number*                                                                           | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `rawResponse`                                                                      | [AxiosResponse>](https://axios-http.com/docs/res_schema)                           | :heavy_minus_sign:                                                                 | N/A                                                                                |
