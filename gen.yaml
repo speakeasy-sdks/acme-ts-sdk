@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 9aa415ebe1e88ff31569d0723ab1156d
   docVersion: 1.0.0
-  speakeasyVersion: 1.56.3
-  generationVersion: 2.61.4
+  speakeasyVersion: 1.57.0
+  generationVersion: 2.62.1
 generation:
   comments:
     disableComments: false
@@ -13,7 +13,7 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 typescript:
-  version: 1.7.1
+  version: 1.8.0
   author: Example
   maxMethodParams: "4"
   packageName: acme-api
