@@ -99,7 +99,6 @@ This endpoint returns the compass heading of a Tesla. The value is in degrees, w
 ```typescript
 import { AcmeApi } from "acme-api";
 import { GetTeslaCompassResponse } from "acme-api/dist/sdk/models/operations";
-import { CompassDirection } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
@@ -328,7 +327,6 @@ When the vehicle is plugged in, this endpoint sets the amperage of the charger m
 ```typescript
 import { AcmeApi } from "acme-api";
 import { SetTeslaAmmeterResponse } from "acme-api/dist/sdk/models/operations";
-import { SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {

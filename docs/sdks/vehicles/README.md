@@ -28,7 +28,6 @@ __Description__ Returns a list of responses from multiple Smartcar endpoints, al
 ```typescript
 import { AcmeApi } from "acme-api";
 import { BatchResponse } from "acme-api/dist/sdk/models/operations";
-import { ResponseCode } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
@@ -78,7 +77,7 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { DisconnectResponse, DisconnectStatus } from "acme-api/dist/sdk/models/operations";
+import { DisconnectResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
@@ -574,7 +573,7 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { LockUnlockResponse } from "acme-api/dist/sdk/models/operations";
-import { SecurityActionAction, SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
+import { SecurityActionAction } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {

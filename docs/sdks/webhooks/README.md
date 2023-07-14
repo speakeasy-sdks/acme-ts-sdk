@@ -26,7 +26,6 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { SubscribeResponse } from "acme-api/dist/sdk/models/operations";
-import { SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
@@ -80,7 +79,6 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { UnsubscribeResponse } from "acme-api/dist/sdk/models/operations";
-import { SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {

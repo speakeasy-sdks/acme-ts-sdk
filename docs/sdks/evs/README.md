@@ -170,7 +170,6 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { GetChargingStatusResponse } from "acme-api/dist/sdk/models/operations";
-import { ChargeStatusState } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
@@ -209,7 +208,6 @@ Returns the current charge limit of an electric vehicle.
 ```typescript
 import { AcmeApi } from "acme-api";
 import { SetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
-import { SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
@@ -262,7 +260,7 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { StartStopChargeResponse } from "acme-api/dist/sdk/models/operations";
-import { ChargeActionAction, SuccessResponseStatus } from "acme-api/dist/sdk/models/shared";
+import { ChargeActionAction } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
