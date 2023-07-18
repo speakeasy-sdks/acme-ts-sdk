@@ -3,6 +3,7 @@
  */
 
 import * as utils from "../internal/utils";
+import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
@@ -77,6 +78,13 @@ export class Tesla {
                         JSON.parse(decodedRes),
                         shared.ChargeAmmeter
                     );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -144,6 +152,13 @@ export class Tesla {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.chargeTime = utils.objectToClass(JSON.parse(decodedRes), shared.ChargeTime);
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -206,6 +221,13 @@ export class Tesla {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.compass = utils.objectToClass(JSON.parse(decodedRes), shared.Compass);
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -275,6 +297,13 @@ export class Tesla {
                     res.temperature = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.Temperature
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
                     );
                 }
                 break;
@@ -346,6 +375,13 @@ export class Tesla {
                         JSON.parse(decodedRes),
                         shared.Temperature
                     );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -412,6 +448,13 @@ export class Tesla {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.speed = utils.objectToClass(JSON.parse(decodedRes), shared.Speed);
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -481,6 +524,13 @@ export class Tesla {
                         JSON.parse(decodedRes),
                         shared.ChargeVoltage
                     );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
                 }
                 break;
         }
@@ -549,6 +599,13 @@ export class Tesla {
                     res.chargeWattage = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ChargeWattage
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
                     );
                 }
                 break;
@@ -631,6 +688,13 @@ export class Tesla {
                     res.successResponse = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.SuccessResponse
+                    );
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
                     );
                 }
                 break;
