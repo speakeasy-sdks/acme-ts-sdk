@@ -56,8 +56,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.10.1";
-    genVersion = "2.70.2";
+    sdkVersion = "1.11.0";
+    genVersion = "2.71.0";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
