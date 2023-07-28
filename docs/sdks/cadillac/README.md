@@ -15,15 +15,16 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
+import { GetCadillacChargeTimeRequest, GetCadillacChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "corrupti";
 
-sdk.cadillac.getChargeTime("corrupti").then((res: GetCadillacChargeTimeResponse) => {
+sdk.cadillac.getChargeTime(vehicleId).then((res: GetCadillacChargeTimeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,15 +54,16 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacVoltageResponse } from "acme-api/dist/sdk/models/operations";
+import { GetCadillacVoltageRequest, GetCadillacVoltageResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "provident";
 
-sdk.cadillac.getVoltage("provident").then((res: GetCadillacVoltageResponse) => {
+sdk.cadillac.getVoltage(vehicleId).then((res: GetCadillacVoltageResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

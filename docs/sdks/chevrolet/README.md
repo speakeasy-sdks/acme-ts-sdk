@@ -15,15 +15,16 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChevroletChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChevroletChargeTimeRequest, GetChevroletChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "distinctio";
 
-sdk.chevrolet.getChargeTime("distinctio").then((res: GetChevroletChargeTimeResponse) => {
+sdk.chevrolet.getChargeTime(vehicleId).then((res: GetChevroletChargeTimeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,15 +54,16 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChevroletVoltageResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChevroletVoltageRequest, GetChevroletVoltageResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "quibusdam";
 
-sdk.chevrolet.getVoltage("quibusdam").then((res: GetChevroletVoltageResponse) => {
+sdk.chevrolet.getVoltage(vehicleId).then((res: GetChevroletVoltageResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

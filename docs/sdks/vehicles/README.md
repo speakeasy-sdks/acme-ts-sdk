@@ -27,20 +27,22 @@ __Description__ Returns a list of responses from multiple Smartcar endpoints, al
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { BatchResponse } from "acme-api/dist/sdk/models/operations";
+import { BatchRequest, BatchResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "molestiae";
+const requestBody: string[] = [
+  "/odometer",
+  "/odometer",
+  "/odometer",
+  "/odometer",
+];
 
-sdk.vehicles.batch("molestiae", [
-  "/odometer",
-  "/odometer",
-  "/odometer",
-  "/odometer",
-]).then((res: BatchResponse) => {
+sdk.vehicles.batch(vehicleId, requestBody).then((res: BatchResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -77,15 +79,16 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { DisconnectResponse } from "acme-api/dist/sdk/models/operations";
+import { DisconnectRequest, DisconnectResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "placeat";
 
-sdk.vehicles.disconnect("placeat").then((res: DisconnectResponse) => {
+sdk.vehicles.disconnect(vehicleId).then((res: DisconnectResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -128,15 +131,16 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetVehicleResponse } from "acme-api/dist/sdk/models/operations";
+import { GetVehicleRequest, GetVehicleResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "voluptatum";
 
-sdk.vehicles.get("voluptatum").then((res: GetVehicleResponse) => {
+sdk.vehicles.get(vehicleId).then((res: GetVehicleResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -176,15 +180,16 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetEngineOilResponse } from "acme-api/dist/sdk/models/operations";
+import { GetEngineOilRequest, GetEngineOilResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "iusto";
 
-sdk.vehicles.getEngineOil("iusto").then((res: GetEngineOilResponse) => {
+sdk.vehicles.getEngineOil(vehicleId).then((res: GetEngineOilResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,15 +231,16 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetFuelTankResponse } from "acme-api/dist/sdk/models/operations";
+import { GetFuelTankRequest, GetFuelTankResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "excepturi";
 
-sdk.vehicles.getFuelTank("excepturi").then((res: GetFuelTankResponse) => {
+sdk.vehicles.getFuelTank(vehicleId).then((res: GetFuelTankResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -275,15 +281,16 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetLocationResponse } from "acme-api/dist/sdk/models/operations";
+import { GetLocationRequest, GetLocationResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
-sdk.vehicles.getLocation("36ab27d0-fd9d-4455-823a-ce30af709ffc").then((res: GetLocationResponse) => {
+sdk.vehicles.getLocation(vehicleId).then((res: GetLocationResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -323,15 +330,16 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetOdometerResponse } from "acme-api/dist/sdk/models/operations";
+import { GetOdometerRequest, GetOdometerResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "nisi";
 
-sdk.vehicles.getOdometer("nisi").then((res: GetOdometerResponse) => {
+sdk.vehicles.getOdometer(vehicleId).then((res: GetOdometerResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -378,15 +386,18 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetPermissionsResponse } from "acme-api/dist/sdk/models/operations";
+import { GetPermissionsRequest, GetPermissionsResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "recusandae";
+const limit: number = 836079;
+const offset: number = 71036;
 
-sdk.vehicles.getPermissions("recusandae", 836079, 71036).then((res: GetPermissionsResponse) => {
+sdk.vehicles.getPermissions(vehicleId, limit, offset).then((res: GetPermissionsResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -430,15 +441,16 @@ __Example Response__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTirePressureResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTirePressureRequest, GetTirePressureResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "quis";
 
-sdk.vehicles.getTirePressure("quis").then((res: GetTirePressureResponse) => {
+sdk.vehicles.getTirePressure(vehicleId).then((res: GetTirePressureResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -468,15 +480,16 @@ Returns the vehicle’s manufacturer identifier.
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetVinResponse } from "acme-api/dist/sdk/models/operations";
+import { GetVinRequest, GetVinResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "veritatis";
 
-sdk.vehicles.getVin("veritatis").then((res: GetVinResponse) => {
+sdk.vehicles.getVin(vehicleId).then((res: GetVinResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -523,15 +536,17 @@ __Response Body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { ListVehiclesResponse } from "acme-api/dist/sdk/models/operations";
+import { ListVehiclesRequest, ListVehiclesResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const limit: number = 648172;
+const offset: number = 20218;
 
-sdk.vehicles.listVehicles(648172, 20218).then((res: ListVehiclesResponse) => {
+sdk.vehicles.listVehicles(limit, offset).then((res: ListVehiclesResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -572,18 +587,20 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { LockUnlockResponse } from "acme-api/dist/sdk/models/operations";
-import { SecurityActionAction } from "acme-api/dist/sdk/models/shared";
+import { LockUnlockRequest, LockUnlockResponse } from "acme-api/dist/sdk/models/operations";
+import { SecurityAction, SecurityActionAction } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
-
-sdk.vehicles.lockUnlock("ipsam", {
+const vehicleId: string = "ipsam";
+const securityAction: SecurityAction = {
   action: SecurityActionAction.Unlock,
-}).then((res: LockUnlockResponse) => {
+};
+
+sdk.vehicles.lockUnlock(vehicleId, securityAction).then((res: LockUnlockResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

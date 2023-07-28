@@ -25,18 +25,22 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { SubscribeResponse } from "acme-api/dist/sdk/models/operations";
+import { SubscribeRequest, SubscribeResponse } from "acme-api/dist/sdk/models/operations";
+import { WebhookInfo } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
-
-sdk.webhooks.subscribe("repellendus", "sapiente", {
+const vehicleId: string = "repellendus";
+const webhookId: string = "sapiente";
+const webhookInfo: WebhookInfo = {
   vehicleid: "dc6ea99e-57d1-4e41-b129-27e7eb58713e",
   webhookid: "9b6ae692-60cc-4b3e-89d8-71e7549cf805",
-}).then((res: SubscribeResponse) => {
+};
+
+sdk.webhooks.subscribe(vehicleId, webhookId, webhookInfo).then((res: SubscribeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -78,15 +82,17 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { UnsubscribeResponse } from "acme-api/dist/sdk/models/operations";
+import { UnsubscribeRequest, UnsubscribeResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "quo";
+const webhookId: string = "odit";
 
-sdk.webhooks.unsubscribe("quo", "odit").then((res: UnsubscribeResponse) => {
+sdk.webhooks.unsubscribe(vehicleId, webhookId).then((res: UnsubscribeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

@@ -33,15 +33,16 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetBatteryCapacityResponse } from "acme-api/dist/sdk/models/operations";
+import { GetBatteryCapacityRequest, GetBatteryCapacityResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "unde";
 
-sdk.evs.getBatteryCapacity("unde").then((res: GetBatteryCapacityResponse) => {
+sdk.evs.getBatteryCapacity(vehicleId).then((res: GetBatteryCapacityResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,15 +83,16 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetBatteryLevelResponse } from "acme-api/dist/sdk/models/operations";
+import { GetBatteryLevelRequest, GetBatteryLevelResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "nulla";
 
-sdk.evs.getBatteryLevel("nulla").then((res: GetBatteryLevelResponse) => {
+sdk.evs.getBatteryLevel(vehicleId).then((res: GetBatteryLevelResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -120,15 +122,16 @@ Returns the current charge limit of an electric vehicle.
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChargingLimitRequest, GetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "corrupti";
 
-sdk.evs.getChargingLimit("corrupti").then((res: GetChargingLimitResponse) => {
+sdk.evs.getChargingLimit(vehicleId).then((res: GetChargingLimitResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -169,15 +172,16 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChargingStatusResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChargingStatusRequest, GetChargingStatusResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const vehicleId: string = "illum";
 
-sdk.evs.getChargingStatus("illum").then((res: GetChargingStatusResponse) => {
+sdk.evs.getChargingStatus(vehicleId).then((res: GetChargingStatusResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -207,17 +211,20 @@ Returns the current charge limit of an electric vehicle.
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { SetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
+import { SetChargingLimitRequest, SetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
+import { ChargeLimit } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
-
-sdk.evs.setChargingLimit("vel", {
+const vehicleId: string = "vel";
+const chargeLimit: ChargeLimit = {
   limit: 1,
-}).then((res: SetChargingLimitResponse) => {
+};
+
+sdk.evs.setChargingLimit(vehicleId, chargeLimit).then((res: SetChargingLimitResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -259,18 +266,20 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { StartStopChargeResponse } from "acme-api/dist/sdk/models/operations";
-import { ChargeActionAction } from "acme-api/dist/sdk/models/shared";
+import { StartStopChargeRequest, StartStopChargeResponse } from "acme-api/dist/sdk/models/operations";
+import { ChargeAction, ChargeActionAction } from "acme-api/dist/sdk/models/shared";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
-
-sdk.evs.startStopCharge("error", {
+const vehicleId: string = "error";
+const chargeAction: ChargeAction = {
   action: ChargeActionAction.Start,
-}).then((res: StartStopChargeResponse) => {
+};
+
+sdk.evs.startStopCharge(vehicleId, chargeAction).then((res: StartStopChargeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

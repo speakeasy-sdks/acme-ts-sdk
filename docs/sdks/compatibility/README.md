@@ -49,15 +49,18 @@ __Enum Values__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { ListCompatibilityResponse } from "acme-api/dist/sdk/models/operations";
+import { ListCompatibilityRequest, ListCompatibilityResponse } from "acme-api/dist/sdk/models/operations";
 
 const sdk = new AcmeApi({
   security: {
     bearerAuth: "",
   },
 });
+const country: string = "{country}";
+const scope: string = "{scope}";
+const vin: string = "{vin}";
 
-sdk.compatibility.listCompatibility("{country}", "{scope}", "{vin}").then((res: ListCompatibilityResponse) => {
+sdk.compatibility.listCompatibility(country, scope, vin).then((res: ListCompatibilityResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
