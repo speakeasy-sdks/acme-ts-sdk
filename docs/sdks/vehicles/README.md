@@ -37,9 +37,6 @@ const sdk = new AcmeApi({
 const vehicleId: string = "molestiae";
 const requestBody: string[] = [
   "/odometer",
-  "/odometer",
-  "/odometer",
-  "/odometer",
 ];
 
 sdk.vehicles.batch(vehicleId, requestBody).then((res: BatchResponse) => {
@@ -86,7 +83,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "placeat";
+const vehicleId: string = "minus";
 
 sdk.vehicles.disconnect(vehicleId).then((res: DisconnectResponse) => {
   if (res.statusCode == 200) {
@@ -138,7 +135,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "voluptatum";
+const vehicleId: string = "placeat";
 
 sdk.vehicles.get(vehicleId).then((res: GetVehicleResponse) => {
   if (res.statusCode == 200) {
@@ -187,7 +184,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "iusto";
+const vehicleId: string = "voluptatum";
 
 sdk.vehicles.getEngineOil(vehicleId).then((res: GetEngineOilResponse) => {
   if (res.statusCode == 200) {
@@ -238,7 +235,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "excepturi";
+const vehicleId: string = "iusto";
 
 sdk.vehicles.getFuelTank(vehicleId).then((res: GetFuelTankResponse) => {
   if (res.statusCode == 200) {
@@ -337,7 +334,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "nisi";
+const vehicleId: string = "excepturi";
 
 sdk.vehicles.getOdometer(vehicleId).then((res: GetOdometerResponse) => {
   if (res.statusCode == 200) {
@@ -393,9 +390,9 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "recusandae";
-const limit: number = 836079;
-const offset: number = 71036;
+const vehicleId: string = "nisi";
+const limit: number = 925597;
+const offset: number = 836079;
 
 sdk.vehicles.getPermissions(vehicleId, limit, offset).then((res: GetPermissionsResponse) => {
   if (res.statusCode == 200) {
@@ -448,7 +445,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "quis";
+const vehicleId: string = "ab";
 
 sdk.vehicles.getTirePressure(vehicleId).then((res: GetTirePressureResponse) => {
   if (res.statusCode == 200) {
@@ -487,7 +484,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "veritatis";
+const vehicleId: string = "quis";
 
 sdk.vehicles.getVin(vehicleId).then((res: GetVinResponse) => {
   if (res.statusCode == 200) {
@@ -543,8 +540,8 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const limit: number = 648172;
-const offset: number = 20218;
+const limit: number = 87129;
+const offset: number = 648172;
 
 sdk.vehicles.listVehicles(limit, offset).then((res: ListVehiclesResponse) => {
   if (res.statusCode == 200) {
@@ -595,7 +592,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "ipsam";
+const vehicleId: string = "perferendis";
 const securityAction: SecurityAction = {
   action: SecurityActionAction.Unlock,
 };
