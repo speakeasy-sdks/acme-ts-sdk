@@ -10,9 +10,6 @@ export enum SuccessResponseStatus {
     Failed = "FAILED",
 }
 
-/**
- * return Success Response
- */
 export class SuccessResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "message" })

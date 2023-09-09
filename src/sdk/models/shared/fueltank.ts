@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * return fuel tank reading
- */
 export class FuelTank extends SpeakeasyBase {
     /**
      * The amount of fuel in the tank (in liters by default or in gallons (U.S.) using the sc-unit-system).

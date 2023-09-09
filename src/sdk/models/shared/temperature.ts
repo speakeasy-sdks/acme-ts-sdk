@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * returns the exterior temperature of a Tesla.
- */
 export class Temperature extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "temperature" })

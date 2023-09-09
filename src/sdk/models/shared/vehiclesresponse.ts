@@ -15,9 +15,6 @@ export class VehiclesResponsePaging extends SpeakeasyBase {
     offset?: number;
 }
 
-/**
- * A list of vehicles
- */
 export class VehiclesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "paging" })

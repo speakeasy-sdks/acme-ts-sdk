@@ -15,9 +15,6 @@ export class PermissionPaging extends SpeakeasyBase {
     offset?: number;
 }
 
-/**
- * The applications permissions
- */
 export class Permission extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "paging" })

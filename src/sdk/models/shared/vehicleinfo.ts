@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * A single vehicles
- */
 export class VehicleInfo extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

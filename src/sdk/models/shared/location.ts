@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * A list of vehicles
- */
 export class Location extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "latitude" })
