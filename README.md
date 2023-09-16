@@ -43,21 +43,21 @@ sdk.vehicles.getLocation(vehicleId).then((res: GetLocationResponse) => {
 ## Available Resources and Operations
 
 
-### [cadillac](docs/sdks/cadillac/README.md)
+### [Cadillac](docs/sdks/cadillac/README.md)
 
 * [getChargeTime](docs/sdks/cadillac/README.md#getchargetime) - Retrieve charging completion time for a Cadillac.
 * [getVoltage](docs/sdks/cadillac/README.md#getvoltage) - Retrieve charging voltmeter time for a Cadillac.
 
-### [chevrolet](docs/sdks/chevrolet/README.md)
+### [Chevrolet](docs/sdks/chevrolet/README.md)
 
 * [getChargeTime](docs/sdks/chevrolet/README.md#getchargetime) - Retrieve charging completion time for a Chevrolet.
 * [getVoltage](docs/sdks/chevrolet/README.md#getvoltage) - Retrieve charging voltmeter time for a Chevrolet.
 
-### [compatibility](docs/sdks/compatibility/README.md)
+### [Compatibility](docs/sdks/compatibility/README.md)
 
 * [listCompatibility](docs/sdks/compatibility/README.md#listcompatibility) - Compatibility
 
-### [evs](docs/sdks/evs/README.md)
+### [Evs](docs/sdks/evs/README.md)
 
 * [getBatteryCapacity](docs/sdks/evs/README.md#getbatterycapacity) - EV Battery Capacity
 * [getBatteryLevel](docs/sdks/evs/README.md#getbatterylevel) - EV Battery Level
@@ -66,7 +66,7 @@ sdk.vehicles.getLocation(vehicleId).then((res: GetLocationResponse) => {
 * [setChargingLimit](docs/sdks/evs/README.md#setcharginglimit) - Set EV Charging Limit
 * [startStopCharge](docs/sdks/evs/README.md#startstopcharge) - Start or stop charging an electric vehicle. Please contact us to request early access.
 
-### [tesla](docs/sdks/tesla/README.md)
+### [Tesla](docs/sdks/tesla/README.md)
 
 * [getAmmeter](docs/sdks/tesla/README.md#getammeter) - Retrieve charging ammeter time for a Tesla.
 * [getChargeTime](docs/sdks/tesla/README.md#getchargetime) - Retrieve charging completion time for a Tesla.
@@ -78,11 +78,11 @@ sdk.vehicles.getLocation(vehicleId).then((res: GetLocationResponse) => {
 * [getWattmeter](docs/sdks/tesla/README.md#getwattmeter) - Retrieve charging wattmeter time for a Tesla.
 * [setAmmeter](docs/sdks/tesla/README.md#setammeter) - Set charging ammeter time for a Tesla.
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [getInfo](docs/sdks/user/README.md#getinfo) - User Info
 
-### [vehicles](docs/sdks/vehicles/README.md)
+### [Vehicles](docs/sdks/vehicles/README.md)
 
 * [batch](docs/sdks/vehicles/README.md#batch) - Batch
 * [disconnect](docs/sdks/vehicles/README.md#disconnect) - Revoke Access
@@ -97,7 +97,7 @@ sdk.vehicles.getLocation(vehicleId).then((res: GetLocationResponse) => {
 * [listVehicles](docs/sdks/vehicles/README.md#listvehicles) - All Vehicles
 * [lockUnlock](docs/sdks/vehicles/README.md#lockunlock) - Lock/Unlock Vehicle
 
-### [webhooks](docs/sdks/webhooks/README.md)
+### [Webhooks](docs/sdks/webhooks/README.md)
 
 * [subscribe](docs/sdks/webhooks/README.md#subscribe) - Subscribe Webhook
 * [unsubscribe](docs/sdks/webhooks/README.md#unsubscribe) - Unsubscribe Webhook

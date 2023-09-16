@@ -1,4 +1,4 @@
-# cadillac
+# Cadillac
 
 ### Available Operations
 

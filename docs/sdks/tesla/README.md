@@ -1,4 +1,4 @@
-# tesla
+# Tesla
 
 ### Available Operations
 

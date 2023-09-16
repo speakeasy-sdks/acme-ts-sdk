@@ -1,4 +1,4 @@
-# compatibility
+# Compatibility
 
 ## Overview
 
