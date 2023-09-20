@@ -41,7 +41,7 @@ export class Vehicles {
         );
         const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/batch", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "requestBody", "json");
@@ -1021,7 +1021,7 @@ export class Vehicles {
         );
         const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/security", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "securityAction", "json");

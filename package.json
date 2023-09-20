@@ -1,6 +1,6 @@
 {
   "name": "acme-api",
-  "version": "1.21.3",
+  "version": "1.21.4",
   "author": "Example",
   "scripts": {
     "prepare": "tsc --build"

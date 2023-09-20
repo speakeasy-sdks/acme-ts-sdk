@@ -392,7 +392,7 @@ export class Evs {
         );
         const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge/limit", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "chargeLimit", "json");
@@ -494,7 +494,7 @@ export class Evs {
         );
         const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "chargeAction", "json");
