@@ -23,7 +23,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "distinctio";
+const vehicleId: string = "lightly";
 
 sdk.chevrolet.getChargeTime(vehicleId).then((res: GetChevroletChargeTimeResponse) => {
   if (res.statusCode == 200) {
@@ -62,7 +62,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "quibusdam";
+const vehicleId: string = "Global";
 
 sdk.chevrolet.getVoltage(vehicleId).then((res: GetChevroletVoltageResponse) => {
   if (res.statusCode == 200) {

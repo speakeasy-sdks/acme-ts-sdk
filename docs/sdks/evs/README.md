@@ -41,7 +41,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "unde";
+const vehicleId: string = "Crew";
 
 sdk.evs.getBatteryCapacity(vehicleId).then((res: GetBatteryCapacityResponse) => {
   if (res.statusCode == 200) {
@@ -91,7 +91,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "nulla";
+const vehicleId: string = "Movies";
 
 sdk.evs.getBatteryLevel(vehicleId).then((res: GetBatteryLevelResponse) => {
   if (res.statusCode == 200) {
@@ -130,7 +130,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "corrupti";
+const vehicleId: string = "vertical";
 
 sdk.evs.getChargingLimit(vehicleId).then((res: GetChargingLimitResponse) => {
   if (res.statusCode == 200) {
@@ -180,7 +180,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "illum";
+const vehicleId: string = "Health";
 
 sdk.evs.getChargingStatus(vehicleId).then((res: GetChargingStatusResponse) => {
   if (res.statusCode == 200) {
@@ -220,7 +220,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "vel";
+const vehicleId: string = "dynamic";
 const chargeLimit: ChargeLimit = {
   limit: 1,
 };
@@ -275,7 +275,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "error";
+const vehicleId: string = "beside";
 const chargeAction: ChargeAction = {
   action: ChargeActionAction.Start,
 };

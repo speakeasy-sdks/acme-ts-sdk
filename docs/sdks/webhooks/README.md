@@ -34,8 +34,8 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "ipsam";
-const webhookId: string = "repellendus";
+const vehicleId: string = "Chicken";
+const webhookId: string = "Cedi";
 const webhookInfo: WebhookInfo = {
   vehicleid: "dc6ea99e-57d1-4e41-b129-27e7eb58713e",
   webhookid: "9b6ae692-60cc-4b3e-89d8-71e7549cf805",
@@ -90,8 +90,8 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "sapiente";
-const webhookId: string = "quo";
+const vehicleId: string = "deposit";
+const webhookId: string = "royal";
 
 sdk.webhooks.unsubscribe(vehicleId, webhookId).then((res: UnsubscribeResponse) => {
   if (res.statusCode == 200) {

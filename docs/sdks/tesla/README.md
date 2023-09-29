@@ -30,7 +30,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "deserunt";
+const vehicleId: string = "alarm";
 
 sdk.tesla.getAmmeter(vehicleId).then((res: GetTeslaAmmeterResponse) => {
   if (res.statusCode == 200) {
@@ -69,7 +69,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "suscipit";
+const vehicleId: string = "lightly";
 
 sdk.tesla.getChargeTime(vehicleId).then((res: GetTeslaChargeTimeResponse) => {
   if (res.statusCode == 200) {
@@ -108,7 +108,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "iure";
+const vehicleId: string = "Loan";
 
 sdk.tesla.getCompass(vehicleId).then((res: GetTeslaCompassResponse) => {
   if (res.statusCode == 200) {
@@ -147,7 +147,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const id: string = "magnam";
+const id: string = "Hatchback";
 
 sdk.tesla.getExteriorTemperature(id).then((res: GetTeslaExteriorTemperatureResponse) => {
   if (res.statusCode == 200) {
@@ -186,7 +186,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const id: string = "debitis";
+const id: string = "mobile";
 
 sdk.tesla.getInteriorTemperature(id).then((res: GetTeslaInteriorTemperatureResponse) => {
   if (res.statusCode == 200) {
@@ -225,7 +225,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "ipsa";
+const vehicleId: string = "withdrawal";
 
 sdk.tesla.getSpeedometer(vehicleId).then((res: GetTeslaSpeedResponse) => {
   if (res.statusCode == 200) {
@@ -264,7 +264,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "delectus";
+const vehicleId: string = "Global";
 
 sdk.tesla.getVoltage(vehicleId).then((res: GetTeslaVoltageResponse) => {
   if (res.statusCode == 200) {
@@ -303,7 +303,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "tempora";
+const vehicleId: string = "danger";
 
 sdk.tesla.getWattmeter(vehicleId).then((res: GetTeslaWattmeterResponse) => {
   if (res.statusCode == 200) {
@@ -343,7 +343,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "suscipit";
+const vehicleId: string = "Diesel";
 const chargeAmmeter: ChargeAmmeter = {
   amperage: 48,
 };

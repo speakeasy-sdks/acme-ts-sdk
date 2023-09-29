@@ -23,7 +23,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "corrupti";
+const vehicleId: string = "lightly";
 
 sdk.cadillac.getChargeTime(vehicleId).then((res: GetCadillacChargeTimeResponse) => {
   if (res.statusCode == 200) {
@@ -62,7 +62,7 @@ const sdk = new AcmeApi({
     bearerAuth: "",
   },
 });
-const vehicleId: string = "provident";
+const vehicleId: string = "Global";
 
 sdk.cadillac.getVoltage(vehicleId).then((res: GetCadillacVoltageResponse) => {
   if (res.statusCode == 200) {
