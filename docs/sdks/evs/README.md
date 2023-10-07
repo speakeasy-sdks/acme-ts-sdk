@@ -34,20 +34,22 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetBatteryCapacityRequest, GetBatteryCapacityResponse } from "acme-api/dist/sdk/models/operations";
+import { GetBatteryCapacityRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Crew";
 
-sdk.evs.getBatteryCapacity(vehicleId).then((res: GetBatteryCapacityResponse) => {
+  const res = await sdk.evs.getBatteryCapacity(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -84,20 +86,22 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetBatteryLevelRequest, GetBatteryLevelResponse } from "acme-api/dist/sdk/models/operations";
+import { GetBatteryLevelRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Movies";
 
-sdk.evs.getBatteryLevel(vehicleId).then((res: GetBatteryLevelResponse) => {
+  const res = await sdk.evs.getBatteryLevel(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -123,20 +127,22 @@ Returns the current charge limit of an electric vehicle.
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChargingLimitRequest, GetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChargingLimitRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "vertical";
 
-sdk.evs.getChargingLimit(vehicleId).then((res: GetChargingLimitResponse) => {
+  const res = await sdk.evs.getChargingLimit(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,20 +179,22 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChargingStatusRequest, GetChargingStatusResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChargingStatusRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Health";
 
-sdk.evs.getChargingStatus(vehicleId).then((res: GetChargingStatusResponse) => {
+  const res = await sdk.evs.getChargingStatus(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,24 +220,26 @@ Returns the current charge limit of an electric vehicle.
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { SetChargingLimitRequest, SetChargingLimitResponse } from "acme-api/dist/sdk/models/operations";
+import { SetChargingLimitRequest } from "acme-api/dist/sdk/models/operations";
 import { ChargeLimit } from "acme-api/dist/sdk/models/shared";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "dynamic";
 const chargeLimit: ChargeLimit = {
   limit: 1,
 };
 
-sdk.evs.setChargingLimit(vehicleId, chargeLimit).then((res: SetChargingLimitResponse) => {
+  const res = await sdk.evs.setChargingLimit(vehicleId, chargeLimit);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -267,24 +277,26 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { StartStopChargeRequest, StartStopChargeResponse } from "acme-api/dist/sdk/models/operations";
+import { StartStopChargeRequest } from "acme-api/dist/sdk/models/operations";
 import { ChargeAction, ChargeActionAction } from "acme-api/dist/sdk/models/shared";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "beside";
 const chargeAction: ChargeAction = {
   action: ChargeActionAction.Start,
 };
 
-sdk.evs.startStopCharge(vehicleId, chargeAction).then((res: StartStopChargeResponse) => {
+  const res = await sdk.evs.startStopCharge(vehicleId, chargeAction);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -23,20 +23,22 @@ When the vehicle is plugged in, this endpoint returns the amperage of the charge
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaAmmeterRequest, GetTeslaAmmeterResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaAmmeterRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "alarm";
 
-sdk.tesla.getAmmeter(vehicleId).then((res: GetTeslaAmmeterResponse) => {
+  const res = await sdk.tesla.getAmmeter(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -62,20 +64,22 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaChargeTimeRequest, GetTeslaChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "lightly";
 
-sdk.tesla.getChargeTime(vehicleId).then((res: GetTeslaChargeTimeResponse) => {
+  const res = await sdk.tesla.getChargeTime(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -101,20 +105,22 @@ This endpoint returns the compass heading of a Tesla. The value is in degrees, w
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaCompassRequest, GetTeslaCompassResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaCompassRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Loan";
 
-sdk.tesla.getCompass(vehicleId).then((res: GetTeslaCompassResponse) => {
+  const res = await sdk.tesla.getCompass(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -140,20 +146,22 @@ This endpoint returns the exterior temperature of a Tesla, in celsius by default
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaExteriorTemperatureRequest, GetTeslaExteriorTemperatureResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaExteriorTemperatureRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const id: string = "Hatchback";
 
-sdk.tesla.getExteriorTemperature(id).then((res: GetTeslaExteriorTemperatureResponse) => {
+  const res = await sdk.tesla.getExteriorTemperature(id);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -179,20 +187,22 @@ This endpoint returns the interior temperature of a Tesla, in celsius by default
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaInteriorTemperatureRequest, GetTeslaInteriorTemperatureResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaInteriorTemperatureRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const id: string = "mobile";
 
-sdk.tesla.getInteriorTemperature(id).then((res: GetTeslaInteriorTemperatureResponse) => {
+  const res = await sdk.tesla.getInteriorTemperature(id);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -218,20 +228,22 @@ This endpoint returns the speed of a Tesla (in kilometers/hour by default or in 
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaSpeedRequest, GetTeslaSpeedResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaSpeedRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "withdrawal";
 
-sdk.tesla.getSpeedometer(vehicleId).then((res: GetTeslaSpeedResponse) => {
+  const res = await sdk.tesla.getSpeedometer(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -257,20 +269,22 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaVoltageRequest, GetTeslaVoltageResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaVoltageRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Global";
 
-sdk.tesla.getVoltage(vehicleId).then((res: GetTeslaVoltageResponse) => {
+  const res = await sdk.tesla.getVoltage(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -296,20 +310,22 @@ When the vehicle is plugged in, this endpoint returns the wattage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetTeslaWattmeterRequest, GetTeslaWattmeterResponse } from "acme-api/dist/sdk/models/operations";
+import { GetTeslaWattmeterRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "danger";
 
-sdk.tesla.getWattmeter(vehicleId).then((res: GetTeslaWattmeterResponse) => {
+  const res = await sdk.tesla.getWattmeter(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -335,24 +351,26 @@ When the vehicle is plugged in, this endpoint sets the amperage of the charger m
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { SetTeslaAmmeterRequest, SetTeslaAmmeterResponse } from "acme-api/dist/sdk/models/operations";
+import { SetTeslaAmmeterRequest } from "acme-api/dist/sdk/models/operations";
 import { ChargeAmmeter } from "acme-api/dist/sdk/models/shared";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Diesel";
 const chargeAmmeter: ChargeAmmeter = {
   amperage: 48,
 };
 
-sdk.tesla.setAmmeter(vehicleId, chargeAmmeter).then((res: SetTeslaAmmeterResponse) => {
+  const res = await sdk.tesla.setAmmeter(vehicleId, chargeAmmeter);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -16,20 +16,22 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacChargeTimeRequest, GetCadillacChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
+import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "lightly";
 
-sdk.cadillac.getChargeTime(vehicleId).then((res: GetCadillacChargeTimeResponse) => {
+  const res = await sdk.cadillac.getChargeTime(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -55,20 +57,22 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacVoltageRequest, GetCadillacVoltageResponse } from "acme-api/dist/sdk/models/operations";
+import { GetCadillacVoltageRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Global";
 
-sdk.cadillac.getVoltage(vehicleId).then((res: GetCadillacVoltageResponse) => {
+  const res = await sdk.cadillac.getVoltage(vehicleId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

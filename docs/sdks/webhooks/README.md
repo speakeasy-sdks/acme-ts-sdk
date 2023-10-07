@@ -26,14 +26,15 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { SubscribeRequest, SubscribeResponse } from "acme-api/dist/sdk/models/operations";
+import { SubscribeRequest } from "acme-api/dist/sdk/models/operations";
 import { WebhookInfo } from "acme-api/dist/sdk/models/shared";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "Chicken";
 const webhookId: string = "Cedi";
 const webhookInfo: WebhookInfo = {
@@ -41,11 +42,12 @@ const webhookInfo: WebhookInfo = {
   webhookid: "9b6ae692-60cc-4b3e-89d8-71e7549cf805",
 };
 
-sdk.webhooks.subscribe(vehicleId, webhookId, webhookInfo).then((res: SubscribeResponse) => {
+  const res = await sdk.webhooks.subscribe(vehicleId, webhookId, webhookInfo);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -83,21 +85,23 @@ __Response body__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { UnsubscribeRequest, UnsubscribeResponse } from "acme-api/dist/sdk/models/operations";
+import { UnsubscribeRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
 const vehicleId: string = "deposit";
 const webhookId: string = "royal";
 
-sdk.webhooks.unsubscribe(vehicleId, webhookId).then((res: UnsubscribeResponse) => {
+  const res = await sdk.webhooks.unsubscribe(vehicleId, webhookId);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
