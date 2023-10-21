@@ -36,7 +36,7 @@ import { BatchRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "fuchsia";
+const vehicleId: string = "string";
 const requestBody: string[] = [
   "/odometer",
 ];
@@ -87,7 +87,7 @@ import { DisconnectRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Creative";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.disconnect(vehicleId);
 
@@ -141,7 +141,7 @@ import { GetVehicleRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "female";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.get(vehicleId);
 
@@ -192,7 +192,7 @@ import { GetEngineOilRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Games";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getEngineOil(vehicleId);
 
@@ -245,7 +245,7 @@ import { GetFuelTankRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "blue";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getFuelTank(vehicleId);
 
@@ -348,7 +348,7 @@ import { GetOdometerRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "chomp";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getOdometer(vehicleId);
 
@@ -406,9 +406,9 @@ import { GetPermissionsRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Hybrid";
-const limit: number = 244593;
-const offset: number = 528474;
+const vehicleId: string = "string";
+const limit: number = 362662;
+const offset: number = 729387;
 
   const res = await sdk.vehicles.getPermissions(vehicleId, limit, offset);
 
@@ -463,7 +463,7 @@ import { GetTirePressureRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "deposit";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getTirePressure(vehicleId);
 
@@ -504,7 +504,7 @@ import { GetVinRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "invoice";
+const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getVin(vehicleId);
 
@@ -616,7 +616,7 @@ import { SecurityAction, SecurityActionAction } from "acme-api/dist/sdk/models/s
       bearerAuth: "",
     },
   });
-const vehicleId: string = "maximized";
+const vehicleId: string = "string";
 const securityAction: SecurityAction = {
   action: SecurityActionAction.Unlock,
 };

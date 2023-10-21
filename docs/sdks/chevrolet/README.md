@@ -24,7 +24,7 @@ import { GetChevroletChargeTimeRequest } from "acme-api/dist/sdk/models/operatio
       bearerAuth: "",
     },
   });
-const vehicleId: string = "lightly";
+const vehicleId: string = "string";
 
   const res = await sdk.chevrolet.getChargeTime(vehicleId);
 
@@ -65,7 +65,7 @@ import { GetChevroletVoltageRequest } from "acme-api/dist/sdk/models/operations"
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Global";
+const vehicleId: string = "string";
 
   const res = await sdk.chevrolet.getVoltage(vehicleId);
 

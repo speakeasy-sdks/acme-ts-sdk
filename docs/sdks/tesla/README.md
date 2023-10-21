@@ -31,7 +31,7 @@ import { GetTeslaAmmeterRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "alarm";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getAmmeter(vehicleId);
 
@@ -72,7 +72,7 @@ import { GetTeslaChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "lightly";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getChargeTime(vehicleId);
 
@@ -113,7 +113,7 @@ import { GetTeslaCompassRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Loan";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getCompass(vehicleId);
 
@@ -154,7 +154,7 @@ import { GetTeslaExteriorTemperatureRequest } from "acme-api/dist/sdk/models/ope
       bearerAuth: "",
     },
   });
-const id: string = "Hatchback";
+const id: string = "string";
 
   const res = await sdk.tesla.getExteriorTemperature(id);
 
@@ -195,7 +195,7 @@ import { GetTeslaInteriorTemperatureRequest } from "acme-api/dist/sdk/models/ope
       bearerAuth: "",
     },
   });
-const id: string = "mobile";
+const id: string = "string";
 
   const res = await sdk.tesla.getInteriorTemperature(id);
 
@@ -236,7 +236,7 @@ import { GetTeslaSpeedRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "withdrawal";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getSpeedometer(vehicleId);
 
@@ -277,7 +277,7 @@ import { GetTeslaVoltageRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Global";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getVoltage(vehicleId);
 
@@ -318,7 +318,7 @@ import { GetTeslaWattmeterRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "danger";
+const vehicleId: string = "string";
 
   const res = await sdk.tesla.getWattmeter(vehicleId);
 
@@ -360,7 +360,7 @@ import { ChargeAmmeter } from "acme-api/dist/sdk/models/shared";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Diesel";
+const vehicleId: string = "string";
 const chargeAmmeter: ChargeAmmeter = {
   amperage: 48,
 };

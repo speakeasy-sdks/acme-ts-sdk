@@ -35,8 +35,8 @@ import { WebhookInfo } from "acme-api/dist/sdk/models/shared";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Chicken";
-const webhookId: string = "Cedi";
+const vehicleId: string = "string";
+const webhookId: string = "string";
 const webhookInfo: WebhookInfo = {
   vehicleid: "dc6ea99e-57d1-4e41-b129-27e7eb58713e",
   webhookid: "9b6ae692-60cc-4b3e-89d8-71e7549cf805",
@@ -93,8 +93,8 @@ import { UnsubscribeRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "deposit";
-const webhookId: string = "royal";
+const vehicleId: string = "string";
+const webhookId: string = "string";
 
   const res = await sdk.webhooks.unsubscribe(vehicleId, webhookId);
 

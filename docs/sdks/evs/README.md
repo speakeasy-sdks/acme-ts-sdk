@@ -42,7 +42,7 @@ import { GetBatteryCapacityRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Crew";
+const vehicleId: string = "string";
 
   const res = await sdk.evs.getBatteryCapacity(vehicleId);
 
@@ -94,7 +94,7 @@ import { GetBatteryLevelRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Movies";
+const vehicleId: string = "string";
 
   const res = await sdk.evs.getBatteryLevel(vehicleId);
 
@@ -135,7 +135,7 @@ import { GetChargingLimitRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "vertical";
+const vehicleId: string = "string";
 
   const res = await sdk.evs.getChargingLimit(vehicleId);
 
@@ -187,7 +187,7 @@ import { GetChargingStatusRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Health";
+const vehicleId: string = "string";
 
   const res = await sdk.evs.getChargingStatus(vehicleId);
 
@@ -229,7 +229,7 @@ import { ChargeLimit } from "acme-api/dist/sdk/models/shared";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "dynamic";
+const vehicleId: string = "string";
 const chargeLimit: ChargeLimit = {
   limit: 1,
 };
@@ -286,7 +286,7 @@ import { ChargeAction, ChargeActionAction } from "acme-api/dist/sdk/models/share
       bearerAuth: "",
     },
   });
-const vehicleId: string = "beside";
+const vehicleId: string = "string";
 const chargeAction: ChargeAction = {
   action: ChargeActionAction.Start,
 };

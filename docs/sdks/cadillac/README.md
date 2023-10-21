@@ -24,7 +24,7 @@ import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operation
       bearerAuth: "",
     },
   });
-const vehicleId: string = "lightly";
+const vehicleId: string = "string";
 
   const res = await sdk.cadillac.getChargeTime(vehicleId);
 
@@ -65,7 +65,7 @@ import { GetCadillacVoltageRequest } from "acme-api/dist/sdk/models/operations";
       bearerAuth: "",
     },
   });
-const vehicleId: string = "Global";
+const vehicleId: string = "string";
 
   const res = await sdk.cadillac.getVoltage(vehicleId);
 
