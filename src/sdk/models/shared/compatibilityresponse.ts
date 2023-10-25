@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Capability } from "./capability";
 import { Expose, Type } from "class-transformer";
 
-/**
- * return Compatibility
- */
 export class CompatibilityResponse extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: Capability })
     @Expose({ name: "capabilities" })

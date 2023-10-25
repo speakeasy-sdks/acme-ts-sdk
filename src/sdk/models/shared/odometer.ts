@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * return odometer reading
- */
 export class Odometer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "distance" })

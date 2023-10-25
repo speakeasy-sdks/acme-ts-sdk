@@ -1,4 +1,5 @@
-# compatibility
+# Compatibility
+(*compatibility*)
 
 ## Overview
 
@@ -49,19 +50,24 @@ __Enum Values__
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { ListCompatibilityResponse } from "acme-api/dist/sdk/models/operations";
+import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async() => {
+  const sdk = new AcmeApi({
+    security: {
+      bearerAuth: "",
+    },
+  });
+const country: string = "{country}";
+const scope: string = "{scope}";
+const vin: string = "{vin}";
 
-sdk.compatibility.listCompatibility("{country}", "{scope}", "{vin}").then((res: ListCompatibilityResponse) => {
+  const res = await sdk.compatibility.listCompatibility(country, scope, vin);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

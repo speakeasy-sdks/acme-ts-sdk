@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * returns the amperage of the charger measured by the vehicle.
- */
 export class ChargeAmmeter extends SpeakeasyBase {
     /**
      * The amperage of the charger measured by the vehicle.

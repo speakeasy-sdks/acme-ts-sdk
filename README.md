@@ -20,19 +20,23 @@ yarn add https://github.com/speakeasy-sdks/acme-ts-sdk
 <!-- Start SDK Example Usage -->
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetLocationResponse } from "acme-api/dist/sdk/models/operations";
+import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async () => {
+    const sdk = new AcmeApi({
+        security: {
+            bearerAuth: "",
+        },
+    });
+    const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
-sdk.vehicles.getLocation("36ab27d0-fd9d-4455-823a-ce30af709ffc").then((res: GetLocationResponse) => {
-  if (res.statusCode == 200) {
-    // handle response
-  }
-});
+    const res = await sdk.vehicles.getLocation(vehicleId);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
 ```
 <!-- End SDK Example Usage -->
 
@@ -99,6 +103,28 @@ sdk.vehicles.getLocation("36ab27d0-fd9d-4455-823a-ce30af709ffc").then((res: GetL
 * [subscribe](docs/sdks/webhooks/README.md#subscribe) - Subscribe Webhook
 * [unsubscribe](docs/sdks/webhooks/README.md#unsubscribe) - Unsubscribe Webhook
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `next` method that can be called to pull down the next group of results. If the
+return value of `next` is `null`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

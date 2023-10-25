@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * return Pressure reading
- */
 export class TirePressure extends SpeakeasyBase {
     /**
      * The current air pressure of the back left tire (in kilopascals by default or in pounds per square inch using the sc-unit-system).
