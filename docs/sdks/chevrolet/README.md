@@ -1,4 +1,5 @@
-# chevrolet
+# Chevrolet
+(*chevrolet*)
 
 ### Available Operations
 
@@ -15,19 +16,21 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChevroletChargeTimeResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChevroletChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
+(async() => {
+  const sdk = new AcmeApi({
     bearerAuth: "",
-  },
-});
+  });
+const vehicleId: string = "string";
 
-sdk.chevrolet.getChargeTime("distinctio").then((res: GetChevroletChargeTimeResponse) => {
+  const res = await sdk.chevrolet.getChargeTime(vehicleId);
+
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -53,19 +56,21 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetChevroletVoltageResponse } from "acme-api/dist/sdk/models/operations";
+import { GetChevroletVoltageRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
+(async() => {
+  const sdk = new AcmeApi({
     bearerAuth: "",
-  },
-});
+  });
+const vehicleId: string = "string";
 
-sdk.chevrolet.getVoltage("quibusdam").then((res: GetChevroletVoltageResponse) => {
+  const res = await sdk.chevrolet.getVoltage(vehicleId);
+
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

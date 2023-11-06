@@ -19,9 +19,6 @@ export enum CompassDirection {
     Nw = "NW",
 }
 
-/**
- * returns the compass heading of a Tesla.
- */
 export class Compass extends SpeakeasyBase {
     /**
      * The direction the vehicle is traveling.

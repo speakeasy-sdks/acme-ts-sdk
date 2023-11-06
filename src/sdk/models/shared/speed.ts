@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * returns the speed of a Tesla.
- */
 export class Speed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "speed" })

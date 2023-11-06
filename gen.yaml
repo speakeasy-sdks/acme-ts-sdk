@@ -2,18 +2,25 @@ configVersion: 1.0.0
 management:
   docChecksum: 9aa415ebe1e88ff31569d0723ab1156d
   docVersion: 1.0.0
-  speakeasyVersion: 1.49.0
-  generationVersion: 2.41.4
+  speakeasyVersion: 1.112.1
+  generationVersion: 2.173.0
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
+  comments: {}
   sdkClassName: acme-api
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks/acme-ts-sdk.git
+features:
+  typescript:
+    core: 2.94.0
+    examples: 2.81.3
+    flattening: 2.81.1
+    globalSecurity: 2.82.0
+    globalServerURLs: 2.82.0
+    nameOverrides: 2.81.1
 typescript:
-  version: 1.0.0
+  version: 1.1.0
   author: Example
+  flattenGlobalSecurity: true
+  installationURL: https://github.com/speakeasy-sdks/acme-ts-sdk
   maxMethodParams: "4"
   packageName: acme-api
+  repoSubDirectory: .

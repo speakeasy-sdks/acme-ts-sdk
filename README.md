@@ -20,19 +20,21 @@ yarn add https://github.com/speakeasy-sdks/acme-ts-sdk
 <!-- Start SDK Example Usage -->
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetLocationResponse } from "acme-api/dist/sdk/models/operations";
+import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 
-const sdk = new AcmeApi({
-  security: {
-    bearerAuth: "",
-  },
-});
+(async () => {
+    const sdk = new AcmeApi({
+        bearerAuth: "",
+    });
+    const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
-sdk.vehicles.getLocation("36ab27d0-fd9d-4455-823a-ce30af709ffc").then((res: GetLocationResponse) => {
-  if (res.statusCode == 200) {
-    // handle response
-  }
-});
+    const res = await sdk.vehicles.getLocation(vehicleId);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
 ```
 <!-- End SDK Example Usage -->
 
@@ -99,6 +101,116 @@ sdk.vehicles.getLocation("36ab27d0-fd9d-4455-823a-ce30af709ffc").then((res: GetL
 * [subscribe](docs/sdks/webhooks/README.md#subscribe) - Subscribe Webhook
 * [unsubscribe](docs/sdks/webhooks/README.md#unsubscribe) - Unsubscribe Webhook
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.smartcar.com/v2.0` | None |
+
+For example:
+
+
+```typescript
+import { AcmeApi } from "acme-api";
+import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
+
+(async () => {
+    const sdk = new AcmeApi({
+        bearerAuth: "",
+        serverIdx: 0,
+    });
+    const vehicleId: string = "string";
+
+    const res = await sdk.cadillac.getChargeTime(vehicleId);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+
+
+```typescript
+import { AcmeApi } from "acme-api";
+import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
+
+(async () => {
+    const sdk = new AcmeApi({
+        bearerAuth: "",
+        serverURL: "https://api.smartcar.com/v2.0",
+    });
+    const vehicleId: string = "string";
+
+    const res = await sdk.cadillac.getChargeTime(vehicleId);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+
+
+For example, you could specify a header for every request that your sdk makes as follows:
+
+```typescript
+from acme-api import AcmeApi;
+import axios;
+
+const httpClient = axios.create({
+    headers: {'x-custom-header': 'someValue'}
+})
+
+
+const sdk = new AcmeApi({defaultClient: httpClient});
+```
+
+
+<!-- End Custom HTTP Client -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
