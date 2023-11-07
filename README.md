@@ -42,46 +42,15 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 ## Available Resources and Operations
 
 
-### [cadillac](docs/sdks/cadillac/README.md)
-
-* [getChargeTime](docs/sdks/cadillac/README.md#getchargetime) - Retrieve charging completion time for a Cadillac.
-* [getVoltage](docs/sdks/cadillac/README.md#getvoltage) - Retrieve charging voltmeter time for a Cadillac.
-
-### [chevrolet](docs/sdks/chevrolet/README.md)
-
-* [getChargeTime](docs/sdks/chevrolet/README.md#getchargetime) - Retrieve charging completion time for a Chevrolet.
-* [getVoltage](docs/sdks/chevrolet/README.md#getvoltage) - Retrieve charging voltmeter time for a Chevrolet.
-
-### [compatibility](docs/sdks/compatibility/README.md)
+### [.compatibility](docs/sdks/compatibility/README.md)
 
 * [listCompatibility](docs/sdks/compatibility/README.md#listcompatibility) - Compatibility
 
-### [evs](docs/sdks/evs/README.md)
-
-* [getBatteryCapacity](docs/sdks/evs/README.md#getbatterycapacity) - EV Battery Capacity
-* [getBatteryLevel](docs/sdks/evs/README.md#getbatterylevel) - EV Battery Level
-* [getChargingLimit](docs/sdks/evs/README.md#getcharginglimit) - EV Charging Limit
-* [getChargingStatus](docs/sdks/evs/README.md#getchargingstatus) - EV Charging Status
-* [setChargingLimit](docs/sdks/evs/README.md#setcharginglimit) - Set EV Charging Limit
-* [startStopCharge](docs/sdks/evs/README.md#startstopcharge) - Start or stop charging an electric vehicle. Please contact us to request early access.
-
-### [tesla](docs/sdks/tesla/README.md)
-
-* [getAmmeter](docs/sdks/tesla/README.md#getammeter) - Retrieve charging ammeter time for a Tesla.
-* [getChargeTime](docs/sdks/tesla/README.md#getchargetime) - Retrieve charging completion time for a Tesla.
-* [getCompass](docs/sdks/tesla/README.md#getcompass) - Retrieve compass heading for a Tesla.
-* [getExteriorTemperature](docs/sdks/tesla/README.md#getexteriortemperature) - Retrieve exterior temperature for a Tesla.
-* [getInteriorTemperature](docs/sdks/tesla/README.md#getinteriortemperature) - Retrieve interior temperature for a Tesla.
-* [getSpeedometer](docs/sdks/tesla/README.md#getspeedometer) - Retrieve speed for a Tesla.
-* [getVoltage](docs/sdks/tesla/README.md#getvoltage) - Retrieve charging voltmeter time for a Tesla.
-* [getWattmeter](docs/sdks/tesla/README.md#getwattmeter) - Retrieve charging wattmeter time for a Tesla.
-* [setAmmeter](docs/sdks/tesla/README.md#setammeter) - Set charging ammeter time for a Tesla.
-
-### [user](docs/sdks/user/README.md)
+### [.user](docs/sdks/user/README.md)
 
 * [getInfo](docs/sdks/user/README.md#getinfo) - User Info
 
-### [vehicles](docs/sdks/vehicles/README.md)
+### [.vehicles](docs/sdks/vehicles/README.md)
 
 * [batch](docs/sdks/vehicles/README.md#batch) - Batch
 * [disconnect](docs/sdks/vehicles/README.md#disconnect) - Revoke Access
@@ -96,7 +65,38 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 * [listVehicles](docs/sdks/vehicles/README.md#listvehicles) - All Vehicles
 * [lockUnlock](docs/sdks/vehicles/README.md#lockunlock) - Lock/Unlock Vehicle
 
-### [webhooks](docs/sdks/webhooks/README.md)
+### [.tesla](docs/sdks/tesla/README.md)
+
+* [getAmmeter](docs/sdks/tesla/README.md#getammeter) - Retrieve charging ammeter time for a Tesla.
+* [getChargeTime](docs/sdks/tesla/README.md#getchargetime) - Retrieve charging completion time for a Tesla.
+* [getCompass](docs/sdks/tesla/README.md#getcompass) - Retrieve compass heading for a Tesla.
+* [getExteriorTemperature](docs/sdks/tesla/README.md#getexteriortemperature) - Retrieve exterior temperature for a Tesla.
+* [getInteriorTemperature](docs/sdks/tesla/README.md#getinteriortemperature) - Retrieve interior temperature for a Tesla.
+* [getSpeedometer](docs/sdks/tesla/README.md#getspeedometer) - Retrieve speed for a Tesla.
+* [getVoltage](docs/sdks/tesla/README.md#getvoltage) - Retrieve charging voltmeter time for a Tesla.
+* [getWattmeter](docs/sdks/tesla/README.md#getwattmeter) - Retrieve charging wattmeter time for a Tesla.
+* [setAmmeter](docs/sdks/tesla/README.md#setammeter) - Set charging ammeter time for a Tesla.
+
+### [.evs](docs/sdks/evs/README.md)
+
+* [getBatteryCapacity](docs/sdks/evs/README.md#getbatterycapacity) - EV Battery Capacity
+* [getBatteryLevel](docs/sdks/evs/README.md#getbatterylevel) - EV Battery Level
+* [getChargingLimit](docs/sdks/evs/README.md#getcharginglimit) - EV Charging Limit
+* [getChargingStatus](docs/sdks/evs/README.md#getchargingstatus) - EV Charging Status
+* [setChargingLimit](docs/sdks/evs/README.md#setcharginglimit) - Set EV Charging Limit
+* [startStopCharge](docs/sdks/evs/README.md#startstopcharge) - Start or stop charging an electric vehicle. Please contact us to request early access.
+
+### [.cadillac](docs/sdks/cadillac/README.md)
+
+* [getChargeTime](docs/sdks/cadillac/README.md#getchargetime) - Retrieve charging completion time for a Cadillac.
+* [getVoltage](docs/sdks/cadillac/README.md#getvoltage) - Retrieve charging voltmeter time for a Cadillac.
+
+### [.chevrolet](docs/sdks/chevrolet/README.md)
+
+* [getChargeTime](docs/sdks/chevrolet/README.md#getchargetime) - Retrieve charging completion time for a Chevrolet.
+* [getVoltage](docs/sdks/chevrolet/README.md#getvoltage) - Retrieve charging voltmeter time for a Chevrolet.
+
+### [.webhooks](docs/sdks/webhooks/README.md)
 
 * [subscribe](docs/sdks/webhooks/README.md#subscribe) - Subscribe Webhook
 * [unsubscribe](docs/sdks/webhooks/README.md#unsubscribe) - Unsubscribe Webhook
@@ -106,8 +106,6 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 
 <!-- Start Dev Containers -->
 
-
-
 <!-- End Dev Containers -->
 
 
@@ -116,8 +114,6 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 
@@ -135,19 +131,20 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
+import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
 
 (async () => {
     const sdk = new AcmeApi({
-        bearerAuth: "",
         serverIdx: 0,
+        bearerAuth: "",
     });
-    const vehicleId: string = "string";
+    const country: string = "{country}";
+    const scope: string = "{scope}";
+    const vin: string = "{vin}";
 
-    const res = await sdk.cadillac.getChargeTime(vehicleId);
+    const res = await sdk.compatibility.listCompatibility(country, scope, vin);
 
     if (res.statusCode == 200) {
         // handle response
@@ -161,19 +158,20 @@ import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operation
 
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```typescript
 import { AcmeApi } from "acme-api";
-import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
+import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
 
 (async () => {
     const sdk = new AcmeApi({
-        bearerAuth: "",
         serverURL: "https://api.smartcar.com/v2.0",
+        bearerAuth: "",
     });
-    const vehicleId: string = "string";
+    const country: string = "{country}";
+    const scope: string = "{scope}";
+    const vin: string = "{vin}";
 
-    const res = await sdk.cadillac.getChargeTime(vehicleId);
+    const res = await sdk.compatibility.listCompatibility(country, scope, vin);
 
     if (res.statusCode == 200) {
         // handle response
@@ -204,9 +202,45 @@ const httpClient = axios.create({
 
 const sdk = new AcmeApi({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name         | Type         | Scheme       |
+| ------------ | ------------ | ------------ |
+| `bearerAuth` | http         | HTTP Bearer  |
+
+To authenticate with the API the `bearerAuth` parameter must be set when initializing the SDK client instance. For example:
+
+```typescript
+import { AcmeApi } from "acme-api";
+import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
+
+(async () => {
+    const sdk = new AcmeApi({
+        bearerAuth: "",
+    });
+    const country: string = "{country}";
+    const scope: string = "{scope}";
+    const vin: string = "{vin}";
+
+    const res = await sdk.compatibility.listCompatibility(country, scope, vin);
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

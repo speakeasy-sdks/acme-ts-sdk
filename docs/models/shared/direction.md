@@ -1,4 +1,4 @@
-# CompassDirection
+# Direction
 
 The direction the vehicle is traveling.
 

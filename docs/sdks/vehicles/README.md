@@ -1,5 +1,5 @@
 # Vehicles
-(*vehicles*)
+(*.vehicles*)
 
 ## Overview
 

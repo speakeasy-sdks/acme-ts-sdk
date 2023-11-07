@@ -1,5 +1,5 @@
 # Chevrolet
-(*chevrolet*)
+(*.chevrolet*)
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# SuccessResponseStatus
+# Status
 
 
 ## Values

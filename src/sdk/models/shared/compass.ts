@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * The direction the vehicle is traveling.
  */
-export enum CompassDirection {
+export enum Direction {
     N = "N",
     Ne = "NE",
     E = "E",
@@ -25,7 +25,7 @@ export class Compass extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "direction" })
-    direction?: CompassDirection;
+    direction?: Direction;
 
     /**
      * The direction the vehicle is traveling (in degrees).

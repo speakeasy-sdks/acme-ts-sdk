@@ -1,5 +1,5 @@
 # Tesla
-(*tesla*)
+(*.tesla*)
 
 ### Available Operations
 

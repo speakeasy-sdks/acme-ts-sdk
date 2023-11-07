@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Header } from "./header";
 import { Expose, Type } from "class-transformer";
 
-export enum ResponseCode {
+export enum Code {
     TwoHundred = "200",
     FiveHundred = "500",
 }
@@ -18,7 +18,7 @@ export class Response extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "code" })
-    code?: ResponseCode;
+    code?: Code;
 
     @SpeakeasyMetadata({ elemType: Header })
     @Expose({ name: "headers" })

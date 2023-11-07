@@ -3,11 +3,11 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Cadillac } from "./cadillac";
 import { Chevrolet } from "./chevrolet";
 import { Compatibility } from "./compatibility";
 import { Evs } from "./evs";
-import * as shared from "./models/shared";
 import { Tesla } from "./tesla";
 import { User } from "./user";
 import { Vehicles } from "./vehicles";
@@ -58,9 +58,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.1.0";
-    genVersion = "2.173.0";
-    userAgent = "speakeasy-sdk/typescript 1.1.0 2.173.0 1.0.0 acme-api";
+    sdkVersion = "2.0.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0.0 acme-api";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -74,22 +74,22 @@ export class SDKConfiguration {
  * We've detailed how to get started with Smartcar in Postman [here](https://www.notion.so/smartcarapi/How-do-I-use-Postman-with-Smartcar-b8e8483bae8b43a986715582beb54bd4).
  */
 export class AcmeApi {
-    public cadillac: Cadillac;
-    public chevrolet: Chevrolet;
     /**
      * Operations about compatibility
      */
     public compatibility: Compatibility;
-    /**
-     * Operations about electric vehicles
-     */
-    public evs: Evs;
-    public tesla: Tesla;
     public user: User;
     /**
      * Operations about vehicles
      */
     public vehicles: Vehicles;
+    public tesla: Tesla;
+    /**
+     * Operations about electric vehicles
+     */
+    public evs: Evs;
+    public cadillac: Cadillac;
+    public chevrolet: Chevrolet;
     public webhooks: Webhooks;
 
     private sdkConfiguration: SDKConfiguration;
@@ -111,13 +111,13 @@ export class AcmeApi {
             retryConfig: props?.retryConfig,
         });
 
-        this.cadillac = new Cadillac(this.sdkConfiguration);
-        this.chevrolet = new Chevrolet(this.sdkConfiguration);
         this.compatibility = new Compatibility(this.sdkConfiguration);
-        this.evs = new Evs(this.sdkConfiguration);
-        this.tesla = new Tesla(this.sdkConfiguration);
         this.user = new User(this.sdkConfiguration);
         this.vehicles = new Vehicles(this.sdkConfiguration);
+        this.tesla = new Tesla(this.sdkConfiguration);
+        this.evs = new Evs(this.sdkConfiguration);
+        this.cadillac = new Cadillac(this.sdkConfiguration);
+        this.chevrolet = new Chevrolet(this.sdkConfiguration);
         this.webhooks = new Webhooks(this.sdkConfiguration);
     }
 }

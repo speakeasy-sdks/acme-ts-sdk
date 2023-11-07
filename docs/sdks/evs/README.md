@@ -1,5 +1,5 @@
 # Evs
-(*evs*)
+(*.evs*)
 
 ## Overview
 
@@ -273,7 +273,7 @@ __Response body__
 ```typescript
 import { AcmeApi } from "acme-api";
 import { StartStopChargeRequest } from "acme-api/dist/sdk/models/operations";
-import { ChargeAction, ChargeActionAction } from "acme-api/dist/sdk/models/shared";
+import { Action, ChargeAction } from "acme-api/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new AcmeApi({
@@ -281,7 +281,7 @@ import { ChargeAction, ChargeActionAction } from "acme-api/dist/sdk/models/share
   });
 const vehicleId: string = "string";
 const chargeAction: ChargeAction = {
-  action: ChargeActionAction.Start,
+  action: Action.Start,
 };
 
   const res = await sdk.evs.startStopCharge(vehicleId, chargeAction);

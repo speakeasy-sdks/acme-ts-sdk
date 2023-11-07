@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum SuccessResponseStatus {
+export enum Status {
     Success = "SUCCESS",
     Failed = "FAILED",
 }
@@ -17,5 +17,5 @@ export class SuccessResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: SuccessResponseStatus;
+    status?: Status;
 }

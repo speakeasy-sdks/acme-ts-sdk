@@ -1,5 +1,5 @@
 # Cadillac
-(*cadillac*)
+(*.cadillac*)
 
 ### Available Operations
 

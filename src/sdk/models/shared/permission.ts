@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class PermissionPaging extends SpeakeasyBase {
+export class Paging extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "count" })
     count?: number;
@@ -18,8 +18,8 @@ export class PermissionPaging extends SpeakeasyBase {
 export class Permission extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "paging" })
-    @Type(() => PermissionPaging)
-    paging?: PermissionPaging;
+    @Type(() => Paging)
+    paging?: Paging;
 
     @SpeakeasyMetadata()
     @Expose({ name: "permissions" })

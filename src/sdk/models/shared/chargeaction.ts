@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum ChargeActionAction {
+export enum Action {
     Start = "START",
     Stop = "STOP",
 }
@@ -13,5 +13,5 @@ export enum ChargeActionAction {
 export class ChargeAction extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: ChargeActionAction;
+    action?: Action;
 }
