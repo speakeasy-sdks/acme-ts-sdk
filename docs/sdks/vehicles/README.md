@@ -1,5 +1,5 @@
 # Vehicles
-(*.vehicles*)
+(*vehicles*)
 
 ## Overview
 
@@ -41,7 +41,6 @@ const requestBody: string[] = [
 
   const res = await sdk.vehicles.batch(vehicleId, requestBody);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -59,8 +58,12 @@ const requestBody: string[] = [
 
 ### Response
 
-**Promise<[operations.BatchResponse](../../models/operations/batchresponse.md)>**
+**Promise<[operations.BatchResponse](../../sdk/models/operations/batchresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## disconnect
 
@@ -88,7 +91,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.disconnect(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -105,8 +107,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.DisconnectResponse](../../models/operations/disconnectresponse.md)>**
+**Promise<[operations.DisconnectResponse](../../sdk/models/operations/disconnectresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -141,7 +147,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.get(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -158,8 +163,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetVehicleResponse](../../models/operations/getvehicleresponse.md)>**
+**Promise<[operations.GetVehicleResponse](../../sdk/models/operations/getvehicleresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getEngineOil
 
@@ -191,7 +200,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getEngineOil(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -208,8 +216,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetEngineOilResponse](../../models/operations/getengineoilresponse.md)>**
+**Promise<[operations.GetEngineOilResponse](../../sdk/models/operations/getengineoilresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getFuelTank
 
@@ -243,7 +255,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getFuelTank(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -260,8 +271,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetFuelTankResponse](../../models/operations/getfueltankresponse.md)>**
+**Promise<[operations.GetFuelTankResponse](../../sdk/models/operations/getfueltankresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getLocation
 
@@ -294,7 +309,6 @@ const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
   const res = await sdk.vehicles.getLocation(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -311,8 +325,12 @@ const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
 ### Response
 
-**Promise<[operations.GetLocationResponse](../../models/operations/getlocationresponse.md)>**
+**Promise<[operations.GetLocationResponse](../../sdk/models/operations/getlocationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getOdometer
 
@@ -344,7 +362,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getOdometer(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -361,8 +378,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetOdometerResponse](../../models/operations/getodometerresponse.md)>**
+**Promise<[operations.GetOdometerResponse](../../sdk/models/operations/getodometerresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPermissions
 
@@ -403,7 +424,6 @@ const offset: number = 729387;
 
   const res = await sdk.vehicles.getPermissions(vehicleId, limit, offset);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -422,8 +442,12 @@ const offset: number = 729387;
 
 ### Response
 
-**Promise<[operations.GetPermissionsResponse](../../models/operations/getpermissionsresponse.md)>**
+**Promise<[operations.GetPermissionsResponse](../../sdk/models/operations/getpermissionsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getTirePressure
 
@@ -457,7 +481,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getTirePressure(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -474,8 +497,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTirePressureResponse](../../models/operations/gettirepressureresponse.md)>**
+**Promise<[operations.GetTirePressureResponse](../../sdk/models/operations/gettirepressureresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getVin
 
@@ -497,7 +524,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.vehicles.getVin(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -514,8 +540,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetVinResponse](../../models/operations/getvinresponse.md)>**
+**Promise<[operations.GetVinResponse](../../sdk/models/operations/getvinresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## listVehicles
 
@@ -555,7 +585,6 @@ const offset: number = 311354;
 
   const res = await sdk.vehicles.listVehicles(limit, offset);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -573,8 +602,12 @@ const offset: number = 311354;
 
 ### Response
 
-**Promise<[operations.ListVehiclesResponse](../../models/operations/listvehiclesresponse.md)>**
+**Promise<[operations.ListVehiclesResponse](../../sdk/models/operations/listvehiclesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## lockUnlock
 
@@ -610,7 +643,6 @@ const securityAction: SecurityAction = {
 
   const res = await sdk.vehicles.lockUnlock(vehicleId, securityAction);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -619,14 +651,18 @@ const securityAction: SecurityAction = {
 
 ### Parameters
 
-| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
-| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| `vehicleId`                                                    | *string*                                                       | :heavy_check_mark:                                             | N/A                                                            |
-| `securityAction`                                               | [shared.SecurityAction](../../models/shared/securityaction.md) | :heavy_minus_sign:                                             | N/A                                                            |
-| `config`                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)   | :heavy_minus_sign:                                             | Available config options for making requests.                  |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `vehicleId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `securityAction`                                                      | [shared.SecurityAction](../../../sdk/models/shared/securityaction.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
 
 
 ### Response
 
-**Promise<[operations.LockUnlockResponse](../../models/operations/lockunlockresponse.md)>**
+**Promise<[operations.LockUnlockResponse](../../sdk/models/operations/lockunlockresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

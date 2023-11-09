@@ -1,5 +1,5 @@
 # Chevrolet
-(*.chevrolet*)
+(*chevrolet*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.chevrolet.getChargeTime(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -43,8 +42,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetChevroletChargeTimeResponse](../../models/operations/getchevroletchargetimeresponse.md)>**
+**Promise<[operations.GetChevroletChargeTimeResponse](../../sdk/models/operations/getchevroletchargetimeresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getVoltage
 
@@ -66,7 +69,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.chevrolet.getVoltage(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,5 +85,9 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetChevroletVoltageResponse](../../models/operations/getchevroletvoltageresponse.md)>**
+**Promise<[operations.GetChevroletVoltageResponse](../../sdk/models/operations/getchevroletvoltageresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

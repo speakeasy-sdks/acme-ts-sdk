@@ -49,7 +49,7 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/battery/capacity",
             req
@@ -70,7 +70,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -141,7 +141,11 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/battery", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/battery",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -158,7 +162,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -217,7 +221,11 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge/limit", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/charge/limit",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -234,7 +242,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -304,7 +312,11 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/charge",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -321,7 +333,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -382,7 +394,11 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge/limit", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/charge/limit",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -413,7 +429,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -486,7 +502,11 @@ export class Evs {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/charge", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/charge",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -517,7 +537,7 @@ export class Evs {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

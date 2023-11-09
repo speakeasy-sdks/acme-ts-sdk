@@ -35,7 +35,7 @@ export class Cadillac {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/cadillac/charge/completion",
             req
@@ -56,7 +56,7 @@ export class Cadillac {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -113,7 +113,7 @@ export class Cadillac {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/cadillac/charge/voltmeter",
             req
@@ -134,7 +134,7 @@ export class Cadillac {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

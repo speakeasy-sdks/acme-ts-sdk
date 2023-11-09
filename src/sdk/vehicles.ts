@@ -39,7 +39,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/batch", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/batch",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -70,7 +74,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -136,7 +140,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/application", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/application",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -153,7 +161,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -222,7 +230,7 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -239,7 +247,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -308,7 +316,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/engine/oil", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/engine/oil",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -325,7 +337,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -393,7 +405,7 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/fuel", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/fuel", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -410,7 +422,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -477,7 +489,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/location", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/location",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -494,7 +510,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -560,7 +576,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/odometer", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/odometer",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -577,7 +597,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -654,7 +674,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/permissions", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/permissions",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -672,7 +696,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -740,7 +764,7 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/tires/pressure",
             req
@@ -761,7 +785,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -820,7 +844,7 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/vin", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/vin", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -837,7 +861,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -912,7 +936,7 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/vehicles";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/vehicles";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -930,7 +954,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -1001,7 +1025,11 @@ export class Vehicles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/vehicles/{vehicle_id}/security", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/vehicles/{vehicle_id}/security",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1032,7 +1060,7 @@ export class Vehicles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

@@ -1,5 +1,5 @@
 # Compatibility
-(*.compatibility*)
+(*compatibility*)
 
 ## Overview
 
@@ -62,7 +62,6 @@ const vin: string = "{vin}";
 
   const res = await sdk.compatibility.listCompatibility(country, scope, vin);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -81,5 +80,9 @@ const vin: string = "{vin}";
 
 ### Response
 
-**Promise<[operations.ListCompatibilityResponse](../../models/operations/listcompatibilityresponse.md)>**
+**Promise<[operations.ListCompatibilityResponse](../../sdk/models/operations/listcompatibilityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Webhooks
-(*.webhooks*)
+(*webhooks*)
 
 ### Available Operations
 
@@ -42,7 +42,6 @@ const webhookInfo: WebhookInfo = {
 
   const res = await sdk.webhooks.subscribe(vehicleId, webhookId, webhookInfo);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -51,18 +50,22 @@ const webhookInfo: WebhookInfo = {
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `webhookId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `webhookInfo`                                                | [shared.WebhookInfo](../../models/shared/webhookinfo.md)     | :heavy_minus_sign:                                           | N/A                                                          |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `vehicleId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `webhookId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `webhookInfo`                                                   | [shared.WebhookInfo](../../../sdk/models/shared/webhookinfo.md) | :heavy_minus_sign:                                              | N/A                                                             |
+| `config`                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)    | :heavy_minus_sign:                                              | Available config options for making requests.                   |
 
 
 ### Response
 
-**Promise<[operations.SubscribeResponse](../../models/operations/subscriberesponse.md)>**
+**Promise<[operations.SubscribeResponse](../../sdk/models/operations/subscriberesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## unsubscribe
 
@@ -95,7 +98,6 @@ const webhookId: string = "string";
 
   const res = await sdk.webhooks.unsubscribe(vehicleId, webhookId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -113,5 +115,9 @@ const webhookId: string = "string";
 
 ### Response
 
-**Promise<[operations.UnsubscribeResponse](../../models/operations/unsubscriberesponse.md)>**
+**Promise<[operations.UnsubscribeResponse](../../sdk/models/operations/unsubscriberesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # User
-(*.user*)
+(*user*)
 
 ### Available Operations
 
@@ -23,7 +23,6 @@ import { AcmeApi } from "acme-api";
 
   const res = await sdk.user.getInfo();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -39,5 +38,9 @@ import { AcmeApi } from "acme-api";
 
 ### Response
 
-**Promise<[operations.GetInfoResponse](../../models/operations/getinforesponse.md)>**
+**Promise<[operations.GetInfoResponse](../../sdk/models/operations/getinforesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

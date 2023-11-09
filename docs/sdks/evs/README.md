@@ -1,5 +1,5 @@
 # Evs
-(*.evs*)
+(*evs*)
 
 ## Overview
 
@@ -44,7 +44,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.evs.getBatteryCapacity(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -61,8 +60,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetBatteryCapacityResponse](../../models/operations/getbatterycapacityresponse.md)>**
+**Promise<[operations.GetBatteryCapacityResponse](../../sdk/models/operations/getbatterycapacityresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getBatteryLevel
 
@@ -95,7 +98,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.evs.getBatteryLevel(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -112,8 +114,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetBatteryLevelResponse](../../models/operations/getbatterylevelresponse.md)>**
+**Promise<[operations.GetBatteryLevelResponse](../../sdk/models/operations/getbatterylevelresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getChargingLimit
 
@@ -135,7 +141,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.evs.getChargingLimit(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,8 +157,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetChargingLimitResponse](../../models/operations/getcharginglimitresponse.md)>**
+**Promise<[operations.GetChargingLimitResponse](../../sdk/models/operations/getcharginglimitresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getChargingStatus
 
@@ -186,7 +195,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.evs.getChargingStatus(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,8 +211,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetChargingStatusResponse](../../models/operations/getchargingstatusresponse.md)>**
+**Promise<[operations.GetChargingStatusResponse](../../sdk/models/operations/getchargingstatusresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## setChargingLimit
 
@@ -230,7 +242,6 @@ const chargeLimit: ChargeLimit = {
 
   const res = await sdk.evs.setChargingLimit(vehicleId, chargeLimit);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -239,17 +250,21 @@ const chargeLimit: ChargeLimit = {
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `chargeLimit`                                                | [shared.ChargeLimit](../../models/shared/chargelimit.md)     | :heavy_minus_sign:                                           | N/A                                                          |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `vehicleId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
+| `chargeLimit`                                                   | [shared.ChargeLimit](../../../sdk/models/shared/chargelimit.md) | :heavy_minus_sign:                                              | N/A                                                             |
+| `config`                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)    | :heavy_minus_sign:                                              | Available config options for making requests.                   |
 
 
 ### Response
 
-**Promise<[operations.SetChargingLimitResponse](../../models/operations/setcharginglimitresponse.md)>**
+**Promise<[operations.SetChargingLimitResponse](../../sdk/models/operations/setcharginglimitresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## startStopCharge
 
@@ -286,7 +301,6 @@ const chargeAction: ChargeAction = {
 
   const res = await sdk.evs.startStopCharge(vehicleId, chargeAction);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -295,14 +309,18 @@ const chargeAction: ChargeAction = {
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `chargeAction`                                               | [shared.ChargeAction](../../models/shared/chargeaction.md)   | :heavy_minus_sign:                                           | N/A                                                          |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `vehicleId`                                                       | *string*                                                          | :heavy_check_mark:                                                | N/A                                                               |
+| `chargeAction`                                                    | [shared.ChargeAction](../../../sdk/models/shared/chargeaction.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `config`                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)      | :heavy_minus_sign:                                                | Available config options for making requests.                     |
 
 
 ### Response
 
-**Promise<[operations.StartStopChargeResponse](../../models/operations/startstopchargeresponse.md)>**
+**Promise<[operations.StartStopChargeResponse](../../sdk/models/operations/startstopchargeresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

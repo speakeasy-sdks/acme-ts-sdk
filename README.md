@@ -42,15 +42,15 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 ## Available Resources and Operations
 
 
-### [.compatibility](docs/sdks/compatibility/README.md)
+### [compatibility](docs/sdks/compatibility/README.md)
 
 * [listCompatibility](docs/sdks/compatibility/README.md#listcompatibility) - Compatibility
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [getInfo](docs/sdks/user/README.md#getinfo) - User Info
 
-### [.vehicles](docs/sdks/vehicles/README.md)
+### [vehicles](docs/sdks/vehicles/README.md)
 
 * [batch](docs/sdks/vehicles/README.md#batch) - Batch
 * [disconnect](docs/sdks/vehicles/README.md#disconnect) - Revoke Access
@@ -65,7 +65,7 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 * [listVehicles](docs/sdks/vehicles/README.md#listvehicles) - All Vehicles
 * [lockUnlock](docs/sdks/vehicles/README.md#lockunlock) - Lock/Unlock Vehicle
 
-### [.tesla](docs/sdks/tesla/README.md)
+### [tesla](docs/sdks/tesla/README.md)
 
 * [getAmmeter](docs/sdks/tesla/README.md#getammeter) - Retrieve charging ammeter time for a Tesla.
 * [getChargeTime](docs/sdks/tesla/README.md#getchargetime) - Retrieve charging completion time for a Tesla.
@@ -77,7 +77,7 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 * [getWattmeter](docs/sdks/tesla/README.md#getwattmeter) - Retrieve charging wattmeter time for a Tesla.
 * [setAmmeter](docs/sdks/tesla/README.md#setammeter) - Set charging ammeter time for a Tesla.
 
-### [.evs](docs/sdks/evs/README.md)
+### [evs](docs/sdks/evs/README.md)
 
 * [getBatteryCapacity](docs/sdks/evs/README.md#getbatterycapacity) - EV Battery Capacity
 * [getBatteryLevel](docs/sdks/evs/README.md#getbatterylevel) - EV Battery Level
@@ -86,17 +86,17 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 * [setChargingLimit](docs/sdks/evs/README.md#setcharginglimit) - Set EV Charging Limit
 * [startStopCharge](docs/sdks/evs/README.md#startstopcharge) - Start or stop charging an electric vehicle. Please contact us to request early access.
 
-### [.cadillac](docs/sdks/cadillac/README.md)
+### [cadillac](docs/sdks/cadillac/README.md)
 
 * [getChargeTime](docs/sdks/cadillac/README.md#getchargetime) - Retrieve charging completion time for a Cadillac.
 * [getVoltage](docs/sdks/cadillac/README.md#getvoltage) - Retrieve charging voltmeter time for a Cadillac.
 
-### [.chevrolet](docs/sdks/chevrolet/README.md)
+### [chevrolet](docs/sdks/chevrolet/README.md)
 
 * [getChargeTime](docs/sdks/chevrolet/README.md#getchargetime) - Retrieve charging completion time for a Chevrolet.
 * [getVoltage](docs/sdks/chevrolet/README.md#getvoltage) - Retrieve charging voltmeter time for a Chevrolet.
 
-### [.webhooks](docs/sdks/webhooks/README.md)
+### [webhooks](docs/sdks/webhooks/README.md)
 
 * [subscribe](docs/sdks/webhooks/README.md#subscribe) - Subscribe Webhook
 * [unsubscribe](docs/sdks/webhooks/README.md#unsubscribe) - Unsubscribe Webhook
@@ -113,7 +113,38 @@ import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+
+## Example
+
+```typescript
+import { AcmeApi } from "acme-api";
+import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
+
+(async () => {
+    const sdk = new AcmeApi({
+        bearerAuth: "",
+    });
+    const country: string = "{country}";
+    const scope: string = "{scope}";
+    const vin: string = "{vin}";
+
+    let res;
+    try {
+        res = await sdk.compatibility.listCompatibility(country, scope, vin);
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
@@ -207,12 +238,11 @@ const sdk = new AcmeApi({defaultClient: httpClient});
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name         | Type         | Scheme       |
 | ------------ | ------------ | ------------ |

@@ -1,5 +1,5 @@
 # Cadillac
-(*.cadillac*)
+(*cadillac*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.cadillac.getChargeTime(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -43,8 +42,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetCadillacChargeTimeResponse](../../models/operations/getcadillacchargetimeresponse.md)>**
+**Promise<[operations.GetCadillacChargeTimeResponse](../../sdk/models/operations/getcadillacchargetimeresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getVoltage
 
@@ -66,7 +69,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.cadillac.getVoltage(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,5 +85,9 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetCadillacVoltageResponse](../../models/operations/getcadillacvoltageresponse.md)>**
+**Promise<[operations.GetCadillacVoltageResponse](../../sdk/models/operations/getcadillacvoltageresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

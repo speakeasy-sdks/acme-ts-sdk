@@ -1,5 +1,5 @@
 # Tesla
-(*.tesla*)
+(*tesla*)
 
 ### Available Operations
 
@@ -33,7 +33,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getAmmeter(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -50,8 +49,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaAmmeterResponse](../../models/operations/getteslaammeterresponse.md)>**
+**Promise<[operations.GetTeslaAmmeterResponse](../../sdk/models/operations/getteslaammeterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getChargeTime
 
@@ -73,7 +76,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getChargeTime(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -90,8 +92,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaChargeTimeResponse](../../models/operations/getteslachargetimeresponse.md)>**
+**Promise<[operations.GetTeslaChargeTimeResponse](../../sdk/models/operations/getteslachargetimeresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getCompass
 
@@ -113,7 +119,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getCompass(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -130,8 +135,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaCompassResponse](../../models/operations/getteslacompassresponse.md)>**
+**Promise<[operations.GetTeslaCompassResponse](../../sdk/models/operations/getteslacompassresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getExteriorTemperature
 
@@ -153,7 +162,6 @@ const id: string = "string";
 
   const res = await sdk.tesla.getExteriorTemperature(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,8 +178,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaExteriorTemperatureResponse](../../models/operations/getteslaexteriortemperatureresponse.md)>**
+**Promise<[operations.GetTeslaExteriorTemperatureResponse](../../sdk/models/operations/getteslaexteriortemperatureresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getInteriorTemperature
 
@@ -193,7 +205,6 @@ const id: string = "string";
 
   const res = await sdk.tesla.getInteriorTemperature(id);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -210,8 +221,12 @@ const id: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaInteriorTemperatureResponse](../../models/operations/getteslainteriortemperatureresponse.md)>**
+**Promise<[operations.GetTeslaInteriorTemperatureResponse](../../sdk/models/operations/getteslainteriortemperatureresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getSpeedometer
 
@@ -233,7 +248,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getSpeedometer(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -250,8 +264,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaSpeedResponse](../../models/operations/getteslaspeedresponse.md)>**
+**Promise<[operations.GetTeslaSpeedResponse](../../sdk/models/operations/getteslaspeedresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getVoltage
 
@@ -273,7 +291,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getVoltage(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -290,8 +307,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaVoltageResponse](../../models/operations/getteslavoltageresponse.md)>**
+**Promise<[operations.GetTeslaVoltageResponse](../../sdk/models/operations/getteslavoltageresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getWattmeter
 
@@ -313,7 +334,6 @@ const vehicleId: string = "string";
 
   const res = await sdk.tesla.getWattmeter(vehicleId);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -330,8 +350,12 @@ const vehicleId: string = "string";
 
 ### Response
 
-**Promise<[operations.GetTeslaWattmeterResponse](../../models/operations/getteslawattmeterresponse.md)>**
+**Promise<[operations.GetTeslaWattmeterResponse](../../sdk/models/operations/getteslawattmeterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## setAmmeter
 
@@ -357,7 +381,6 @@ const chargeAmmeter: ChargeAmmeter = {
 
   const res = await sdk.tesla.setAmmeter(vehicleId, chargeAmmeter);
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -366,14 +389,18 @@ const chargeAmmeter: ChargeAmmeter = {
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
-| `chargeAmmeter`                                              | [shared.ChargeAmmeter](../../models/shared/chargeammeter.md) | :heavy_minus_sign:                                           | N/A                                                          |
-| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `vehicleId`                                                         | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
+| `chargeAmmeter`                                                     | [shared.ChargeAmmeter](../../../sdk/models/shared/chargeammeter.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
 
 
 ### Response
 
-**Promise<[operations.SetTeslaAmmeterResponse](../../models/operations/setteslaammeterresponse.md)>**
+**Promise<[operations.SetTeslaAmmeterResponse](../../sdk/models/operations/setteslaammeterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

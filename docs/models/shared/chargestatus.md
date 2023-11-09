@@ -1,9 +1,0 @@
-# ChargeStatus
-
-
-## Fields
-
-| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             | Example                                                                                 |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `isPluggedIn`                                                                           | *boolean*                                                                               | :heavy_minus_sign:                                                                      | Indicates whether a charging cable is currently plugged into the vehicle’s charge port. | true                                                                                    |
-| `state`                                                                                 | [shared.State](../../models/shared/state.md)                                            | :heavy_minus_sign:                                                                      | N/A                                                                                     | FULLY_CHARGED                                                                           |

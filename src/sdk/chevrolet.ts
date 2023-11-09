@@ -35,7 +35,7 @@ export class Chevrolet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/chevrolet/charge/completion",
             req
@@ -56,7 +56,7 @@ export class Chevrolet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -113,7 +113,7 @@ export class Chevrolet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/vehicles/{vehicle_id}/chevrolet/charge/voltmeter",
             req
@@ -134,7 +134,7 @@ export class Chevrolet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
