@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { AcmeApi } from "acme-api";
 import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
