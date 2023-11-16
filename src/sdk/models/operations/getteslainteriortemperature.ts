@@ -28,7 +28,7 @@ export class GetTeslaInteriorTemperatureResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * returns the interior temperature of a Tesla.

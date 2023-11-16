@@ -31,7 +31,7 @@ export class SetTeslaAmmeterResponse extends SpeakeasyBase {
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 
     /**
      * returns the amperage of the charger measured by the vehicle.
