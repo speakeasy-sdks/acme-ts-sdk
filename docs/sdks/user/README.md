@@ -16,9 +16,9 @@ Returns the id of the vehicle owner who granted access to your application. This
 ```typescript
 import { AcmeApi } from "acme-api";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 
   const res = await sdk.user.getInfo();
@@ -26,7 +26,9 @@ import { AcmeApi } from "acme-api";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

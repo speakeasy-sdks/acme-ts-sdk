@@ -30,9 +30,9 @@ __Description__ Returns a list of responses from multiple Smartcar endpoints, al
 import { AcmeApi } from "acme-api";
 import { BatchRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const requestBody: string[] = [
@@ -44,7 +44,9 @@ const requestBody: string[] = [
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -83,9 +85,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { DisconnectRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -94,7 +96,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -139,9 +143,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { GetVehicleRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -150,7 +154,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -192,9 +198,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { GetEngineOilRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -203,7 +209,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -247,9 +255,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { GetFuelTankRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -258,7 +266,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -301,9 +311,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { GetLocationRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
 
@@ -312,7 +322,9 @@ const vehicleId: string = "36ab27d0-fd9d-4455-823a-ce30af709ffc";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -354,9 +366,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { GetOdometerRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -365,7 +377,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -414,9 +428,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { GetPermissionsRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const limit: number = 362662;
@@ -427,7 +441,9 @@ const offset: number = 729387;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -473,9 +489,9 @@ __Example Response__
 import { AcmeApi } from "acme-api";
 import { GetTirePressureRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -484,7 +500,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -516,9 +534,9 @@ Returns the vehicle’s manufacturer identifier.
 import { AcmeApi } from "acme-api";
 import { GetVinRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -527,7 +545,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -576,9 +596,9 @@ __Response Body__
 import { AcmeApi } from "acme-api";
 import { ListVehiclesRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const limit: number = 568500;
 const offset: number = 311354;
@@ -588,7 +608,9 @@ const offset: number = 311354;
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -632,9 +654,9 @@ import { AcmeApi } from "acme-api";
 import { LockUnlockRequest } from "acme-api/dist/sdk/models/operations";
 import { SecurityAction, SecurityActionAction } from "acme-api/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const securityAction: SecurityAction = {
@@ -646,16 +668,18 @@ const securityAction: SecurityAction = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `vehicleId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
-| `securityAction`                                                      | [shared.SecurityAction](../../../sdk/models/shared/securityaction.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
-| `config`                                                              | [AxiosRequestConfig](https://axios-http.com/docs/req_config)          | :heavy_minus_sign:                                                    | Available config options for making requests.                         |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `vehicleId`                                                        | *string*                                                           | :heavy_check_mark:                                                 | N/A                                                                |
+| `securityAction`                                                   | [shared.SecurityAction](../../sdk/models/shared/securityaction.md) | :heavy_minus_sign:                                                 | N/A                                                                |
+| `config`                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)       | :heavy_minus_sign:                                                 | Available config options for making requests.                      |
 
 
 ### Response

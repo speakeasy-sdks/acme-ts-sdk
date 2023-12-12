@@ -29,9 +29,9 @@ import { AcmeApi } from "acme-api";
 import { SubscribeRequest } from "acme-api/dist/sdk/models/operations";
 import { WebhookInfo } from "acme-api/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const webhookId: string = "string";
@@ -45,17 +45,19 @@ const webhookInfo: WebhookInfo = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `vehicleId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
-| `webhookId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
-| `webhookInfo`                                                   | [shared.WebhookInfo](../../../sdk/models/shared/webhookinfo.md) | :heavy_minus_sign:                                              | N/A                                                             |
-| `config`                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)    | :heavy_minus_sign:                                              | Available config options for making requests.                   |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
+| `webhookId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
+| `webhookInfo`                                                | [shared.WebhookInfo](../../sdk/models/shared/webhookinfo.md) | :heavy_minus_sign:                                           | N/A                                                          |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -89,9 +91,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { UnsubscribeRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const webhookId: string = "string";
@@ -101,7 +103,9 @@ const webhookId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

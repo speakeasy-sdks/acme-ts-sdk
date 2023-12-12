@@ -52,9 +52,9 @@ __Enum Values__
 import { AcmeApi } from "acme-api";
 import { ListCompatibilityRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const country: string = "{country}";
 const scope: string = "{scope}";
@@ -65,7 +65,9 @@ const vin: string = "{vin}";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -36,9 +36,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { GetBatteryCapacityRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -47,7 +47,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -90,9 +92,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { GetBatteryLevelRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -101,7 +103,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -133,9 +137,9 @@ Returns the current charge limit of an electric vehicle.
 import { AcmeApi } from "acme-api";
 import { GetChargingLimitRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -144,7 +148,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -187,9 +193,9 @@ __Response body__
 import { AcmeApi } from "acme-api";
 import { GetChargingStatusRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -198,7 +204,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -231,9 +239,9 @@ import { AcmeApi } from "acme-api";
 import { SetChargingLimitRequest } from "acme-api/dist/sdk/models/operations";
 import { ChargeLimit } from "acme-api/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const chargeLimit: ChargeLimit = {
@@ -245,16 +253,18 @@ const chargeLimit: ChargeLimit = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `vehicleId`                                                     | *string*                                                        | :heavy_check_mark:                                              | N/A                                                             |
-| `chargeLimit`                                                   | [shared.ChargeLimit](../../../sdk/models/shared/chargelimit.md) | :heavy_minus_sign:                                              | N/A                                                             |
-| `config`                                                        | [AxiosRequestConfig](https://axios-http.com/docs/req_config)    | :heavy_minus_sign:                                              | Available config options for making requests.                   |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `vehicleId`                                                  | *string*                                                     | :heavy_check_mark:                                           | N/A                                                          |
+| `chargeLimit`                                                | [shared.ChargeLimit](../../sdk/models/shared/chargelimit.md) | :heavy_minus_sign:                                           | N/A                                                          |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -290,9 +300,9 @@ import { AcmeApi } from "acme-api";
 import { StartStopChargeRequest } from "acme-api/dist/sdk/models/operations";
 import { Action, ChargeAction } from "acme-api/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const chargeAction: ChargeAction = {
@@ -304,16 +314,18 @@ const chargeAction: ChargeAction = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `vehicleId`                                                       | *string*                                                          | :heavy_check_mark:                                                | N/A                                                               |
-| `chargeAction`                                                    | [shared.ChargeAction](../../../sdk/models/shared/chargeaction.md) | :heavy_minus_sign:                                                | N/A                                                               |
-| `config`                                                          | [AxiosRequestConfig](https://axios-http.com/docs/req_config)      | :heavy_minus_sign:                                                | Available config options for making requests.                     |
+| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `vehicleId`                                                    | *string*                                                       | :heavy_check_mark:                                             | N/A                                                            |
+| `chargeAction`                                                 | [shared.ChargeAction](../../sdk/models/shared/chargeaction.md) | :heavy_minus_sign:                                             | N/A                                                            |
+| `config`                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)   | :heavy_minus_sign:                                             | Available config options for making requests.                  |
 
 
 ### Response

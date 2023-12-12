@@ -95,7 +95,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/listcompatibilityrequest.md
 docs/sdk/models/operations/listcompatibilityresponse.md
 docs/sdk/models/operations/getinforesponse.md
@@ -214,4 +213,5 @@ docs/sdks/evs/README.md
 docs/sdks/cadillac/README.md
 docs/sdks/chevrolet/README.md
 docs/sdks/webhooks/README.md
+USAGE.md
 .gitattributes

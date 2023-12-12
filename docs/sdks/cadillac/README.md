@@ -18,9 +18,9 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 import { AcmeApi } from "acme-api";
 import { GetCadillacChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -29,7 +29,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,9 +63,9 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 import { AcmeApi } from "acme-api";
 import { GetCadillacVoltageRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -72,7 +74,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

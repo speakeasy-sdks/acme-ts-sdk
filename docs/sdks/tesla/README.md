@@ -25,9 +25,9 @@ When the vehicle is plugged in, this endpoint returns the amperage of the charge
 import { AcmeApi } from "acme-api";
 import { GetTeslaAmmeterRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -36,7 +36,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -68,9 +70,9 @@ When the vehicle is charging, this endpoint returns the date and time the vehicl
 import { AcmeApi } from "acme-api";
 import { GetTeslaChargeTimeRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -79,7 +81,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -111,9 +115,9 @@ This endpoint returns the compass heading of a Tesla. The value is in degrees, w
 import { AcmeApi } from "acme-api";
 import { GetTeslaCompassRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -122,7 +126,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -154,9 +160,9 @@ This endpoint returns the exterior temperature of a Tesla, in celsius by default
 import { AcmeApi } from "acme-api";
 import { GetTeslaExteriorTemperatureRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const id: string = "string";
 
@@ -165,7 +171,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -197,9 +205,9 @@ This endpoint returns the interior temperature of a Tesla, in celsius by default
 import { AcmeApi } from "acme-api";
 import { GetTeslaInteriorTemperatureRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const id: string = "string";
 
@@ -208,7 +216,9 @@ const id: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -240,9 +250,9 @@ This endpoint returns the speed of a Tesla (in kilometers/hour by default or in 
 import { AcmeApi } from "acme-api";
 import { GetTeslaSpeedRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -251,7 +261,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -283,9 +295,9 @@ When the vehicle is plugged in, this endpoint returns the voltage of the charger
 import { AcmeApi } from "acme-api";
 import { GetTeslaVoltageRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -294,7 +306,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -326,9 +340,9 @@ When the vehicle is plugged in, this endpoint returns the wattage of the charger
 import { AcmeApi } from "acme-api";
 import { GetTeslaWattmeterRequest } from "acme-api/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 
@@ -337,7 +351,9 @@ const vehicleId: string = "string";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -370,9 +386,9 @@ import { AcmeApi } from "acme-api";
 import { SetTeslaAmmeterRequest } from "acme-api/dist/sdk/models/operations";
 import { ChargeAmmeter } from "acme-api/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new AcmeApi({
-    bearerAuth: "",
+    bearerAuth: "<YOUR_BEARER_TOKEN_HERE>",
   });
 const vehicleId: string = "string";
 const chargeAmmeter: ChargeAmmeter = {
@@ -384,16 +400,18 @@ const chargeAmmeter: ChargeAmmeter = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `vehicleId`                                                         | *string*                                                            | :heavy_check_mark:                                                  | N/A                                                                 |
-| `chargeAmmeter`                                                     | [shared.ChargeAmmeter](../../../sdk/models/shared/chargeammeter.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
-| `config`                                                            | [AxiosRequestConfig](https://axios-http.com/docs/req_config)        | :heavy_minus_sign:                                                  | Available config options for making requests.                       |
+| Parameter                                                        | Type                                                             | Required                                                         | Description                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `vehicleId`                                                      | *string*                                                         | :heavy_check_mark:                                               | N/A                                                              |
+| `chargeAmmeter`                                                  | [shared.ChargeAmmeter](../../sdk/models/shared/chargeammeter.md) | :heavy_minus_sign:                                               | N/A                                                              |
+| `config`                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)     | :heavy_minus_sign:                                               | Available config options for making requests.                    |
 
 
 ### Response
